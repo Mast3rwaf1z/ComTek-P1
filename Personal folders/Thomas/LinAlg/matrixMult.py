@@ -8,8 +8,8 @@ def multiply(c, constant):
 # and for the purpose of this project it is not needed yet
 
 
-def matrixmultiply(r1, r2):
+def matrixmultiplication(A, B):
     result = []
-    for i in range(len(r1)):
-        result.append(multiply(r2, r1[i]))
+    for i in range(len(A)):
+        result.append(multiply(B, A[i]))
     return result
