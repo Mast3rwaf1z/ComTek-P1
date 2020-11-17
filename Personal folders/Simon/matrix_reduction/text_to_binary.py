@@ -2,7 +2,9 @@ import binascii
 import os
 import sys
 
-a_string = "fissepik"
+print('\n')
+
+a_string = "teststring"
 a_string = input("Enter text to be send: ")
 
 def returnBinary():

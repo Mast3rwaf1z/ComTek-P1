@@ -34,6 +34,9 @@ payloadSize = len(binary_array[0])
 
 # Representation of the data we want to send
 def generateArray(binArr):
+    print(bcolors.SUCCESS + '\nConverts string to ASCII which is converted to bits (last 8 columns in each row)' + bcolors.ENDC)
+    print(bcolors.SUCCESS + 'Header is put each packet/row\n' + bcolors.ENDC)
+
     # Firstly generate the encoding vector:
     for i in range(numberOfPackets):
         coded_packet = []
@@ -111,6 +114,7 @@ def reduceMatrix(m, i, j, ii):
         extractPayload(m, i, j)
 
 def extractPayload(m, i, j):
+    # takes the payload and leaves the header and the redundant rows in the bottom
     for x in range(numberOfPackets):
             temp_array = []
             for y in range(numberOfPackets + payloadSize):
