@@ -1,1 +1,0 @@
-f = open("Rapport.txt", "x")
