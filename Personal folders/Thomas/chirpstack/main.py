@@ -1,38 +1,39 @@
 import json
-import os
-import sys
 import requests
 
-
-with open('login.json') as file:
+with open('login.json') as file:                    
     login = json.load(file)
 
 with open('headers.json') as file:
     headers = json.load(file)
 
-def getJWT():
-    response = requests.post('http://loratest.lanestolen.dk:8080/api/internal/login',data=json.dumps(login), headers=headers)
-    response_data = json.loads(response.content)
-    if (response_data.get('jwt')):
-        headers['Authorization'] = response_data.get('jwt')
-        return response_data.get('jwt')
-    else:
-        headers['Authorization'] = 'invalid'
-        return False
+with open("data.json") as file:
+    data = json.load(file)
+
 def post(addr, data):
     response = requests.post(addr,data=json.dumps(data), headers=headers)
     response_data = json.loads(response.content)
     return response_data    
 def get(addr):
-    get_app = requests.get(addr, headers=headers)
-    return get_app
-
-response = post('http://loratest.lanestolen.dk:8080/api/internal/login',json.load(open("login.json")))
+    response = requests.get(addr, headers=headers)
+    Json = response.content
+    return Json
+#get a new JWT token and save it in a json file
+response = post('http://loratest.lanestolen.dk:8080/api/internal/login', login)
 if (response.get('jwt')):
     headers['Grpc-Metadata-Authorization'] = response.get('jwt')
-    print(headers['Grpc-Metadata-Authorization'])
+    print(json.dumps(headers, indent=4))
     with open('headers.json', 'w') as target:
         json.dump(headers, target, indent=4)
 
-devices=json.loads(get("http://loratest.lanestolen.dk:8080/api/devices?limit=8").content)
-#print(json.dumps(devices,indent=2))
+print()
+#enqueue data in multicast a set number of times, print response
+for i in range(120):
+    response = post("http://loratest.lanestolen.dk:8080/api/multicast-groups/929e121c-f2d2-48cd-b1ff-94684d226b41/queue", data)
+    print(json.dumps(response, indent=4))
+
+print()
+
+#get the queue
+#queue = get("http://loratest.lanestolen.dk:8080/api/multicast-groups/929e121c-f2d2-48cd-b1ff-94684d226b41/queue")
+#print(json.dumps(queue))
