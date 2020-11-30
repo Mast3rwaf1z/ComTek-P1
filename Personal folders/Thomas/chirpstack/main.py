@@ -10,6 +10,9 @@ with open('headers.json') as file:
 with open("data.json") as file:
     data = json.load(file)
 
+with open("devData.json") as file:
+    devData = json.load(file)
+
 def post(addr, data):
     response = requests.post(addr,data=json.dumps(data), headers=headers)
     response_data = json.loads(response.content)
@@ -30,6 +33,7 @@ print()
 #enqueue data in multicast a set number of times, print response
 for i in range(120):
     response = post("http://loratest.lanestolen.dk:8080/api/multicast-groups/929e121c-f2d2-48cd-b1ff-94684d226b41/queue", data)
+    response = post("http://loratest.lanestolen.dk:8080/api/devices/70b3d54993383389/queue", devData)
     print(json.dumps(response, indent=4))
 
 print()
