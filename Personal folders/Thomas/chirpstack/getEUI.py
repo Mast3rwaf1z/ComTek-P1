@@ -11,3 +11,7 @@ print("AppEUI: %s" % binascii.hexlify(app_eui))
 print("AppKey: %s" % binascii.hexlify(app_key))
 
 lora.join(activation=LoRa.OTAA, auth=(app_eui, app_key), timeout=0)
+
+
+#70b3d54993383389
+#70b3d549997bb2a5

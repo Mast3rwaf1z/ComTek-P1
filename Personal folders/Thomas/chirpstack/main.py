@@ -31,9 +31,9 @@ if (response.get('jwt')):
 
 print()
 #enqueue data in multicast a set number of times, print response
-for i in range(120):
+for i in range(300):
     response = post("http://loratest.lanestolen.dk:8080/api/multicast-groups/929e121c-f2d2-48cd-b1ff-94684d226b41/queue", data)
-    response = post("http://loratest.lanestolen.dk:8080/api/devices/70b3d54993383389/queue", devData)
+    #response = post("http://loratest.lanestolen.dk:8080/api/devices/70b3d54993383389/queue", devData)
     print(json.dumps(response, indent=4))
 
 print()
