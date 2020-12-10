@@ -166,7 +166,7 @@ def Generations_Decode(Coded_Symbol, Gen_Num, Gen_Size):
     if Useless_Symbol == 1:
         return -1
 
-    # One last check that can be deleted later
+    # One last check to see if the symbol is dependent
 
     if Pivot_Pos[Gen_Num][Position] == 0:
         Pivot_Pos[Gen_Num][Position] = 1
@@ -297,12 +297,13 @@ s.setsockopt(socket.SOL_LORA, socket.SO_DR, 0)
 # (waits for the data to be sent and for the 2 receive windows to expire)
 s.setblocking(True)
 
-battery = 93
-fullness = 47
-temperature = 26
-
-pkg = struct.pack('Iib',battery,fullness,temperature)
+#battery = 93
+#fullness = 47
+#temperature = 26
+Test_Int = 69
+#pkg = struct.pack('Iib',battery,fullness,temperature)
 # pkg = struct.pack('iii', 1, 2, 3)
+pkg = struct.pack('i', Test_Int)
 
 #Send the package
 try:
@@ -450,3 +451,5 @@ else:
     print("File has stuff in it")
 
 execfile(File_Name)                        # Dangerous. It is possible to brick the LoPy by running the sent file. Only used for showcasing
+
+# We will clean the file before sending it with the report
