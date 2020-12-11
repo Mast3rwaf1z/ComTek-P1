@@ -1,0 +1,339 @@
+Pycom MicroPython 1.18.2.r1 [v1.8.6-849-d6b3616] on 2019-02-22; LoPy4 with ESP32
+Type "help()" for more information.
+>>> 
+>>> Running C:\Users\thoma\Documents\testprogram\ComTek\chirpstack\lopy\main.py
+
+>>> 
+>>> 
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Connected!
+b''
+b''
+b'\x00\x01\xfa\x00\r(\x10\x00# main.py -- put your code here!\r\nimport'
+b''
+b'\x00\x01\xfa\x00\r(\x04\x00alse)\r\nfor i in range(2):\r\n    pycom.rgb'
+b''
+b'\x00\x01\xfa\x00\r(\x01\x00com.rgbled(0x660066)\r\n    time.sleep(1)\r'
+b''
+b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    '
+b''
+b'\x00\x01\xfa\x00\r(\x00\x10)\r\n    time.sleep(1)\r\n    pycom.rgbled(0'
+b''
+b'\x00\x01\xfa\x00\r(\x00\x04gbled(0x330033)\r\n    time.sleep(1)\r\n    '
+b''
+b'\x00\x01\xfa\x00\r(\x00\x01)\r\npycom.heartbeat(True)\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+b''
+b'\x00\x01\xfa\x00\r(\x04\x00alse)\r\nfor i in range(2):\r\n    pycom.rgb'
+b''
+b'\x00\x01\xfa\x00\r(\x00 time.sleep(1)\r\n    pycom.rgbled(0x990099'
+b''
+b'\x00\x01\xfa\x00\r(\x00 time.sleep(1)\r\n    pycom.rgbled(0x990099'
+b''
+b'\x00\x01\xfa\x00\r(\x08\x82Z):,"3\x06\x0edl;y=&4!=ueE\x03\x1d7J`zf@P!($|sgma*s\x19'
+b''
+b'\x00\x01\xfa\x00\r(\x03@joy.s6\\Uut;#!B_\x7f}8d:\x06\x0b j{|iO^}/\x19"FHZ(1yT'
+b''
+b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    '
+b''
+b'\x00\x01\xfa\x00\r(\x010>\x0b\nk|4.}iye/"WYu`>\'pycom.rcrbo\'u.z>%}e8\x04'
+b''
+b'\x00\x01\xfa\x00\r(\x00\x08x660066)\r\n    time.sleep(1)\r\n    pycom.r'
+b''
+b'\x00\x01\xfa\x00\r(\x08\x80*PYCO\x1dti\x06\x00^\x1d\x15\x16L\x11\rEUu34:@@ZF`$HEAR\x00\x0b\x08\x04Z[*'
+b''
+b'\x00\x01\xfa\x00\r(\x14\x00BL\x1e\x04@c$\x16\x16R\rD\x00\x19\x1bTR\x18\x01\x12\x17\x08QF^h*HEREQti\x06\x00^\x1d\x15\x16'
+b''
+b'\x00\x01\xfa\x00\r(\x00)%RQ%g&5!F\x12mp{Y\x1c,,1&Wgso4\x0bINofED\x08\x10\x08@Z_]\x17K'
+b''
+b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl'
+b''
+b'\x00\x01\xfa\x00\r(\x10\x00# main.py -- put your code here!\r\nimport'
+b''
+b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    '
+b''
+b'\x00\x01\xfa\x00\r(\x11\x088y6\x7f+?z5\x11N%=xf7-}*w/\x13O&?lt}\x0c\x027krA\x1fu~73u\x0b'
+b''
+b'\x00\x01\xfa\x00\r(\x10\x00# main.py -- put your code here!\r\nimport'
+b''
+b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl'
+b''
+b'\x00\x01\xfa\x00\r(\x11\x81cb*\x1fB\x1aZ\x12]AN\x0eMPMD\x15\x13Ap4f\x16Vpv}\x0c\x027krA\x1bep=p(\x15'
+b'\x00\x01\xfa\x00\r(\x008%RQu>ez8\x01\x17m?zA\x1b,=m?*\x18\x0c*=&c>\x16\x05*)&bo"6:9?{'
+b''
+b'\x00\x01\xfa\x00\r(\x00H\x1dSF\x18\x01\x1f;#-*\x00\x00PY\x17\x06\x00K\\\x14\x0e\t\x00\x14\x00\x01QNI\x10\x10ccYtiOM\x0eR'
+b''
+b'\x00\x01\xfa\x00\r(\x00(\x0c_[U\x1eEZLhz\x08\x11\t-~IME\x0e\x03\x15\x06\n\x1d\x06CNofED\x08\x10\x08@Z_]\x17K'
+b''
+b'\x00\x01\xfa\x00\r(\x01\x00com.rgbled(0x660066)\r\n    time.sleep(1)\r'
+b''
+b'\x00\x01\xfa\x00\r(\x02\x00led(0x330033)\r\n    time.sleep(1)\r\n    py'
+b''
+b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    '
+b''
+b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl'
+b''
+b'\x00\x01\xfa\x00\r(\x00"\x04\x10\x0e\nC]\x1e\x02\x07\x1cMU\x01=r\x10\x10\x10\x10@IJbg\x0eRGB\x18\x0c\tM\x1e\x0bU\\U@\x11\n'
+b''
+b'\x00\x01\xfa\x00\r(\x02\x00led(0x330033)\r\n    time.sleep(1)\r\n    py'
+b''
+b'\x00\x01\xfa\x00\r(\x00 time.sleep(1)\r\n    pycom.rgbled(0x990099'
+b''
+b'\x00\x01\xfa\x00\r(\x02\x00led(0x330033)\r\n    time.sleep(1)\r\n    py'
+b''
+b'\x00\x01\xfa\x00\r(\x0c\x04&~fc"H7\x145,`6a.gY\x11,+JOQQ4&@\x16!k-59:>\x00\x02o&o\x04'
+b''
+b'\x00\x01\xfa\x00\r(\x08\x00 pycom\r\nimport time\r\n\r\npycom.heartbeat(F'
+b''
+b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl'
+b''
+b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    '
+b''
+b'\x00\x01\xfa\x00\r(\x00 time.sleep(1)\r\n    pycom.rgbled(0x990099'
+b''
+b'\x00\x01\xfa\x00\r(\x00\x02pycom.rgbled(0x000000)\r\n    time.sleep(3'
+b''
+b'\x00\x01\xfa\x00\r(\x02\x00led(0x330033)\r\n    time.sleep(1)\r\n    py'
+b''
+b'\x00\x01\xfa\x00\r(\x02\x10Ehn\x08\x10X\x13GY]V\x1dZaoEP\x08\x11]dgE\x0eSL\x15\x1c\x13G\\\x07\x7fmBLEDXI'
+b''
+b'\x00\x01\xfa\x00\r(\x00\x01)\r\npycom.heartbeat(True)\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+b''
+b'\x00\x01\xfa\x00\r(\x02\x04\x0b\x07\x08MTP\x03K\x03\x03\x03\x03\x1a>#-*\x00\x00TI\x19\x0cC\x16B\x16\t\x15MA\x01<#-*\x00\x00PY'
+b''
+b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl'
+b''
+b'\x00\x01\xfa\x00\r(\x10\x04DB\x01\x04\rF\x1e\x08J\x13\x1d\x1d\x13C\\y*YOURT\n\x02\x01KS\x04\x00\x17\x15\t<#dgPORT'
+b''
+b'\x00\x01\xfa\x00\r(\x01\x84\x0e-!k6?+w9:6r,gsX^>&q\x14Gy}|7.\x08\x02 ~{}8\x01\x17m?zA'
+b''
+b'\x00\x01\xfa\x00\r(\x06\x00\r\t\x17M\x19u9U_B\x13Z\tdd\x00RAN\x13\x0cEW\x07IaoEP\x08\x11YtiOM\x0eR\x17\x1b'
+b''
+b'\x00\x01\xfa\x00\r(\x08\x00 pycom\r\nimport time\r\n\r\npycom.heartbeat(F'
+b'\x00\x01\xfa\x00\r(\x08\x00 pycom\r\nimport time\r\n\r\npycom.heartbeat(F'
+b''
+b'\x00\x01\xfa\x00\r(\x02!1\x01\x03=gh0;{(~crtbeat(Pb{ojP\x14\x02\x07\x1cMU\x01=r\x19\x19\x10\x10I@'
+b''
+b'\x00\x01\xfa\x00\r(\x04 \x15\x05\x1e\x00\x07~f\x03\n\x02\x08X\tdd\x00RAN\x17\x1cK]D\x14\x7fmBLEDXI\x1bVT\x1eB^['
+b''
+b'\x00\x01\xfa\x00\r(\x00\x82zYCOM^\x0b\x04\r\x01K\x16OR\x14UT\x18\x00H\t\x10=:\x19\x19\t-~IME\x0e\x07\x05\x08\x00^[_'
+b''
+b'\x00\x01\xfa\x00\r(\x01@\x06\n\x1d\x06CNofED\x08\x10\x08OU_]\x18DNofED\x08\x10\x0c*.U\x1e0/Lhz\x08\x11\t-'
+b''
+b'\x00\x01\xfa\x00\r(\x12\x00OE\tIY\x16\x1dCI\x10\x1e\x1e\t}\x7fT\x00YO\x01\x1bM\x06A\x17\tE\r\x15ZT\x08\x00\x00IMPO\x02\r'
+b''
+b''
+b''
+b''
+b''
+b''
+b''
+b''
+b''
+b''
+[b'\x00\x01\xfa\x00\r(\x10\x00# main.py -- put your code here!\r\nimport', b'\x00\x01\xfa\x00\r(\x04\x00alse)\r\nfor i in range(2):\r\n    pycom.rgb', b'\x00\x01\xfa\x00\r(\x01\x00com.rgbled(0x660066)\r\n    time.sleep(1)\r', b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    ', b'\x00\x01\xfa\x00\r(\x00\x10)\r\n    time.sleep(1)\r\n    pycom.rgbled(0', b'\x00\x01\xfa\x00\r(\x00\x04gbled(0x330033)\r\n    time.sleep(1)\r\n    ', b'\x00\x01\xfa\x00\r(\x00\x01)\r\npycom.heartbeat(True)\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', b'\x00\x01\xfa\x00\r(\x04\x00alse)\r\nfor i in range(2):\r\n    pycom.rgb', b'\x00\x01\xfa\x00\r(\x00 time.sleep(1)\r\n    pycom.rgbled(0x990099', b'\x00\x01\xfa\x00\r(\x00 time.sleep(1)\r\n    pycom.rgbled(0x990099', b'\x00\x01\xfa\x00\r(\x08\x82Z):,"3\x06\x0edl;y=&4!=ueE\x03\x1d7J`zf@P!($|sgma*s\x19', b'\x00\x01\xfa\x00\r(\x03@joy.s6\\Uut;#!B_\x7f}8d:\x06\x0b j{|iO^}/\x19"FHZ(1yT', b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    ', b'\x00\x01\xfa\x00\r(\x010>\x0b\nk|4.}iye/"WYu`>\'pycom.rcrbo\'u.z>%}e8\x04', b'\x00\x01\xfa\x00\r(\x00\x08x660066)\r\n    time.sleep(1)\r\n    pycom.r', b'\x00\x01\xfa\x00\r(\x08\x80*PYCO\x1dti\x06\x00^\x1d\x15\x16L\x11\rEUu34:@@ZF`$HEAR\x00\x0b\x08\x04Z[*', b'\x00\x01\xfa\x00\r(\x14\x00BL\x1e\x04@c$\x16\x16R\rD\x00\x19\x1bTR\x18\x01\x12\x17\x08QF^h*HEREQti\x06\x00^\x1d\x15\x16', b'\x00\x01\xfa\x00\r(\x00)%RQ%g&5!F\x12mp{Y\x1c,,1&Wgso4\x0bINofED\x08\x10\x08@Z_]\x17K', b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl', b'\x00\x01\xfa\x00\r(\x10\x00# main.py -- put your code here!\r\nimport', b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    ', b'\x00\x01\xfa\x00\r(\x11\x088y6\x7f+?z5\x11N%=xf7-}*w/\x13O&?lt}\x0c\x027krA\x1fu~73u\x0b', b'\x00\x01\xfa\x00\r(\x10\x00# main.py -- put your code here!\r\nimport', b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl', b'\x00\x01\xfa\x00\r(\x11\x81cb*\x1fB\x1aZ\x12]AN\x0eMPMD\x15\x13Ap4f\x16Vpv}\x0c\x027krA\x1bep=p(\x15', b'\x00\x01\xfa\x00\r(\x008%RQu>ez8\x01\x17m?zA\x1b,=m?*\x18\x0c*=&c>\x16\x05*)&bo"6:9?{', b'\x00\x01\xfa\x00\r(\x00H\x1dSF\x18\x01\x1f;#-*\x00\x00PY\x17\x06\x00K\\\x14\x0e\t\x00\x14\x00\x01QNI\x10\x10ccYtiOM\x0eR', b'\x00\x01\xfa\x00\r(\x00(\x0c_[U\x1eEZLhz\x08\x11\t-~IME\x0e\x03\x15\x06\n\x1d\x06CNofED\x08\x10\x08@Z_]\x17K', b'\x00\x01\xfa\x00\r(\x01\x00com.rgbled(0x660066)\r\n    time.sleep(1)\r', b'\x00\x01\xfa\x00\r(\x02\x00led(0x330033)\r\n    time.sleep(1)\r\n    py', b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    ', b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl', b'\x00\x01\xfa\x00\r(\x00"\x04\x10\x0e\nC]\x1e\x02\x07\x1cMU\x01=r\x10\x10\x10\x10@IJbg\x0eRGB\x18\x0c\tM\x1e\x0bU\\U@\x11\n', b'\x00\x01\xfa\x00\r(\x02\x00led(0x330033)\r\n    time.sleep(1)\r\n    py', b'\x00\x01\xfa\x00\r(\x00 time.sleep(1)\r\n    pycom.rgbled(0x990099', b'\x00\x01\xfa\x00\r(\x02\x00led(0x330033)\r\n    time.sleep(1)\r\n    py', b'\x00\x01\xfa\x00\r(\x0c\x04&~fc"H7\x145,`6a.gY\x11,+JOQQ4&@\x16!k-59:>\x00\x02o&o\x04', b'\x00\x01\xfa\x00\r(\x08\x00 pycom\r\nimport time\r\n\r\npycom.heartbeat(F', b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl', b'\x00\x01\xfa\x00\r(\x00@eep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    ', b'\x00\x01\xfa\x00\r(\x00 time.sleep(1)\r\n    pycom.rgbled(0x990099', b'\x00\x01\xfa\x00\r(\x00\x02pycom.rgbled(0x000000)\r\n    time.sleep(3', b'\x00\x01\xfa\x00\r(\x02\x00led(0x330033)\r\n    time.sleep(1)\r\n    py', b'\x00\x01\xfa\x00\r(\x02\x10Ehn\x08\x10X\x13GY]V\x1dZaoEP\x08\x11]dgE\x0eSL\x15\x1c\x13G\\\x07\x7fmBLEDXI', b'\x00\x01\xfa\x00\r(\x00\x01)\r\npycom.heartbeat(True)\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', b'\x00\x01\xfa\x00\r(\x02\x04\x0b\x07\x08MTP\x03K\x03\x03\x03\x03\x1a>#-*\x00\x00TI\x19\x0cC\x16B\x16\t\x15MA\x01<#-*\x00\x00PY', b'\x00\x01\xfa\x00\r(\x00\x80\n    pycom.rgbled(0x990099)\r\n    time.sl', b'\x00\x01\xfa\x00\r(\x10\x04DB\x01\x04\rF\x1e\x08J\x13\x1d\x1d\x13C\\y*YOURT\n\x02\x01KS\x04\x00\x17\x15\t<#dgPORT', b'\x00\x01\xfa\x00\r(\x01\x84\x0e-!k6?+w9:6r,gsX^>&q\x14Gy}|7.\x08\x02 ~{}8\x01\x17m?zA', b'\x00\x01\xfa\x00\r(\x06\x00\r\t\x17M\x19u9U_B\x13Z\tdd\x00RAN\x13\x0cEW\x07IaoEP\x08\x11YtiOM\x0eR\x17\x1b', b'\x00\x01\xfa\x00\r(\x08\x00 pycom\r\nimport time\r\n\r\npycom.heartbeat(F', b'\x00\x01\xfa\x00\r(\x08\x00 pycom\r\nimport time\r\n\r\npycom.heartbeat(F', b'\x00\x01\xfa\x00\r(\x02!1\x01\x03=gh0;{(~crtbeat(Pb{ojP\x14\x02\x07\x1cMU\x01=r\x19\x19\x10\x10I@', b'\x00\x01\xfa\x00\r(\x04 \x15\x05\x1e\x00\x07~f\x03\n\x02\x08X\tdd\x00RAN\x17\x1cK]D\x14\x7fmBLEDXI\x1bVT\x1eB^[', b'\x00\x01\xfa\x00\r(\x00\x82zYCOM^\x0b\x04\r\x01K\x16OR\x14UT\x18\x00H\t\x10=:\x19\x19\t-~IME\x0e\x07\x05\x08\x00^[_', b'\x00\x01\xfa\x00\r(\x01@\x06\n\x1d\x06CNofED\x08\x10\x08OU_]\x18DNofED\x08\x10\x0c*.U\x1e0/Lhz\x08\x11\t-', b'\x00\x01\xfa\x00\r(\x12\x00OE\tIY\x16\x1dCI\x10\x1e\x1e\t}\x7fT\x00YO\x01\x1bM\x06A\x17\tE\r\x15ZT\x08\x00\x00IMPO\x02\r']
+(# main.py -- put your code here!
+import
+(alse)
+for i in range(2):
+    pycom.rgb
+(com.rgbled(0x660066)
+    time.sleep(1)
+(@eep(1)
+    pycom.rgbled(0xCC00CC)
+    
+()
+    time.sleep(1)
+    pycom.rgbled(0
+(gbled(0x330033)
+    time.sleep(1)
+    
+()
+pycom.heartbeat(True)
+
+(alse)
+for i in range(2):
+    pycom.rgb
+( time.sleep(1)
+    pycom.rgbled(0x990099
+( time.sleep(1)
+    pycom.rgbled(0x990099
+�Z):,"3dl;y=&4!=ueE7J`zf@P!($|sgma*s
+(@joy.s6\Uut;#!B_}8d:
+                      j{|iO^}/"FHZ(1yT
+(@eep(1)
+    pycom.rgbled(0xCC00CC)
+    
+(0>
+
+k|4.}iye/"WYu`>'pycom.rcrbo'u.z>%}e8
+x660066)
+    time.sleep(1)
+    pycom.r
+EUu34:@@ZF`$HEAR
+               Z[*
+DQF^h*HEREQti^
+()%RQ%g&5!Fmp{Y,,1&Wgso4
+                        INof@Z_]K
+(�
+    pycom.rgbled(0x990099)
+    time.sl
+(# main.py -- put your code here!
+import
+(@eep(1)
+    pycom.rgbled(0xCC00CC)
+    
+8y6+?z5N%=xf7-}*w/O&?lt}
+                        7krAu~73u
+
+(# main.py -- put your code here!
+import
+(�
+    pycom.rgbled(0x990099)
+    time.sl
+(�cb*BZ]ANMPMDAp4fVpv}
+                      7krAp=p(
+(8%RQu>ez8m?zAm?*
+                 *=&c>*)&bo"6:9?{
+(HSF;#-*PYK\    QNIccYtiOMR
+((
+  _[UEZLhz      -~IME
+CNof@Z_]K
+(com.rgbled(0x660066)
+    time.sleep(1)
+(led(0x330033)
+    time.sleep(1)
+    py
+(@eep(1)
+    pycom.rgbled(0xCC00CC)
+    
+(�
+    pycom.rgbled(0x990099)
+    time.sl
+("
+C]MU=r@IJbgRGB
+                M
+                 U\U@
+
+(led(0x330033)
+    time.sleep(1)
+    py
+( time.sleep(1)
+    pycom.rgbled(0x990099
+(led(0x330033)
+    time.sleep(1)
+    py
+(
+ &~fc"H75,`6a.gY,+JOQQ4&@!k-59:>o&o
+ pycom
+import time
+
+pycom.heartbeat(F
+(�
+    pycom.rgbled(0x990099)
+    time.sl
+(@eep(1)
+    pycom.rgbled(0xCC00CC)
+    
+( time.sleep(1)
+    pycom.rgbled(0x990099
+(pycom.rgbled(0x000000)
+    time.sleep(3
+(led(0x330033)
+    time.sleep(1)
+    py
+(EhXGY]VZaoE]dgESLG\mBLEDXI
+()
+pycom.heartbeat(True)
+
+(
+MTPK>#-*TI
+          CB    MA<#-*PY
+(�
+    pycom.rgbled(0x990099)
+    time.sl
+JC\y*YOURT
+KS      <#dgPORT
+(�-!k6?+w9:6r,gsX^>&qGy}|7 ~{}8m?zA
+(       Mu9U_BZ ddRAN
+                     EWIaoEYtiOMR
+ pycom
+import time
+
+pycom.heartbeat(F
+ pycom
+import time
+
+pycom.heartbeat(F
+(!1=gh0;{(~crtbeat(Pb{ojPMU=rI@
+( ~f
+X       ddRANK]DmBLEDXITB^[
+(�zYCOM^
+KORUTH  =:      -~IM^[_
+(@
+CNofOU_]DNofED
+ZIMPO        *.U0/LhA   E
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x10', '\x00', '#', ' ', 'm', 'a', 'i', 'n', '.', 'p', 'y', ' ', '-', '-', ' ', 'p', 'u', 't', ' ', 'y', 'o', 'u', 'r', ' ', 'c', 'o', 'd', 'e', ' ', 'h', 'e', 'r', 'e', '!', '\r', '\n', 'i', 'm', 'p', 'o', 'r', 't']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x04', '\x00', 'a', 'l', 's', 'e', ')', '\r', '\n', 'f', 'o', 'r', ' ', 'i', ' ', 'i', 'n', ' ', 'r', 'a', 'n', 'g', 'e', '(', '2', ')', ':', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x01', '\x00', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '6', '6', '0', '0', '6', '6', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '@', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', 'C', 'C', '0', '0', 'C', 'C', ')', '\r', '\n', ' ', ' ', ' ', ' ']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\x10', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\x04', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '3', '3', '0', '0', '3', '3', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\x01', ')', '\r', '\n', 'p', 'y', 'c', 'o', 'm', '.', 'h', 'e', 'a', 'r', 't', 'b', 'e', 'a', 't', '(', 'T', 'r', 'u', 'e', ')', '\r', '\n', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x04', '\x00', 'a', 'l', 's', 'e', ')', '\r', '\n', 'f', 'o', 'r', ' ', 'i', ' ', 'i', 'n', ' ', 'r', 'a', 'n', 'g', 'e', '(', '2', ')', ':', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '9', '9', '0', '0', '9', '9']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '9', '9', '0', '0', '9', '9']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x08', 'Z', ')', ':', ',', '"', '3', '\x06', '\x0e', 'd', 'l', ';', 'y', '=', '&', '4', '!', '=', 'u', 'e', 'E', '\x03', '\x1d', '7', 'J', '`', 'z', 'f', '@', 'P', '!', '(', '$', '|', 's', 'g', 'm', 'a', '*', 's', '\x19']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x03', '@', 'j', 'o', 'y', '.', 's', '6', '\\', 'U', 'u', 't', ';', '#', '!', 'B', '_', '\x7f', '}', '8', 'd', ':', '\x06', '\x0b', ' ', 'j', '{', '|', 'i', 'O', '^', '}', '/', '\x19', '"', 'F', 'H', 'Z', '(', '1', 'y', 'T']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '@', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', 'C', 'C', '0', '0', 'C', 'C', ')', '\r', '\n', ' ', ' ', ' ', ' ']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x01', '0', '>', '\x0b', '\n', 'k', '|', '4', '.', '}', 'i', 'y', 'e', '/', '"', 'W', 'Y', 'u', '`', '>', "'", 'p', 'y', 'c', 'o', 'm', '.', 'r', 'c', 'r', 'b', 'o', "'", 'u', '.', 'z', '>', '%', '}', 'e', '8', '\x04']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\x08', 'x', '6', '6', '0', '0', '6', '6', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x08', '*', 'P', 'Y', 'C', 'O', '\x1d', 't', 'i', '\x06', '\x00', '^', '\x1d', '\x15', '\x16', 'L', '\x11', '\r', 'E', 'U', 'u', '3', '4', ':', '@', '@', 'Z', 'F', '`', '$', 'H', 'E', 'A', 'R', '\x00', '\x0b', '\x08', '\x04', 'Z', '[', '*']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x14', '\x00', 'B', 'L', '\x1e', '\x04', '@', 'c', '$', '\x16', '\x16', 'R', '\r', 'D', '\x00', '\x19', '\x1b', 'T', 'R', '\x18', '\x01', '\x12', '\x17', '\x08', 'Q', 'F', '^', 'h', '*', 'H', 'E', 'R', 'E', 'Q', 't', 'i', '\x06', '\x00', '^', '\x1d', '\x15', '\x16']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', ')', '%', 'R', 'Q', '%', 'g', '&', '5', '!', 'F', '\x12', 'm', 'p', '{', 'Y', '\x1c', ',', ',', '1', '&', 'W', 'g', 's', 'o', '4', '\x0b', 'I', 'N', 'o', 'f', 'E', 'D', '\x08', '\x10', '\x08', '@', 'Z', '_', ']', '\x17', 'K']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '9', '9', '0', '0', '9', '9', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x10', '\x00', '#', ' ', 'm', 'a', 'i', 'n', '.', 'p', 'y', ' ', '-', '-', ' ', 'p', 'u', 't', ' ', 'y', 'o', 'u', 'r', ' ', 'c', 'o', 'd', 'e', ' ', 'h', 'e', 'r', 'e', '!', '\r', '\n', 'i', 'm', 'p', 'o', 'r', 't']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '@', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', 'C', 'C', '0', '0', 'C', 'C', ')', '\r', '\n', ' ', ' ', ' ', ' ']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x11', '\x08', '8', 'y', '6', '\x7f', '+', '?', 'z', '5', '\x11', 'N', '%', '=', 'x', 'f', '7', '-', '}', '*', 'w', '/', '\x13', 'O', '&', '?', 'l', 't', '}', '\x0c', '\x02', '7', 'k', 'r', 'A', '\x1f', 'u', '~', '7', '3', 'u', '\x0b']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x10', '\x00', '#', ' ', 'm', 'a', 'i', 'n', '.', 'p', 'y', ' ', '-', '-', ' ', 'p', 'u', 't', ' ', 'y', 'o', 'u', 'r', ' ', 'c', 'o', 'd', 'e', ' ', 'h', 'e', 'r', 'e', '!', '\r', '\n', 'i', 'm', 'p', 'o', 'r', 't']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '9', '9', '0', '0', '9', '9', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x11', 'c', 'b', '*', '\x1f', 'B', '\x1a', 'Z', '\x12', ']', 'A', 'N', '\x0e', 'M', 'P', 'M', 'D', '\x15', '\x13', 'A', 'p', '4', 'f', '\x16', 'V', 'p', 'v', '}', '\x0c', '\x02', '7', 'k', 'r', 'A', '\x1b', 'e', 'p', '=', 'p', '(', '\x15']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '8', '%', 'R', 'Q', 'u', '>', 'e', 'z', '8', '\x01', '\x17', 'm', '?', 'z', 'A', '\x1b', ',', '=', 'm', '?', '*', '\x18', '\x0c', '*', '=', '&', 'c', '>', '\x16', '\x05', '*', ')', '&', 'b', 'o', '"', '6', ':', '9', '?', '{']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', 'H', '\x1d', 'S', 'F', '\x18', '\x01', '\x1f', ';', '#', '-', '*', '\x00', '\x00', 'P', 'Y', '\x17', '\x06', '\x00', 'K', '\\', '\x14', '\x0e', '\t', '\x00', '\x14', '\x00', '\x01', 'Q', 'N', 'I', '\x10', '\x10', 'c', 'c', 'Y', 't', 'i', 'O', 'M', '\x0e', 'R']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '(', '\x0c', '_', '[', 'U', '\x1e', 'E', 'Z', 'L', 'h', 'z', '\x08', '\x11', '\t', '-', '~', 'I', 'M', 'E', '\x0e', '\x03', '\x15', '\x06', '\n', '\x1d', '\x06', 'C', 'N', 'o', 'f', 'E', 'D', '\x08', '\x10', '\x08', '@', 'Z', '_', ']', '\x17', 'K']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x01', '\x00', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '6', '6', '0', '0', '6', '6', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x02', '\x00', 'l', 'e', 'd', '(', '0', 'x', '3', '3', '0', '0', '3', '3', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '@', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', 'C', 'C', '0', '0', 'C', 'C', ')', '\r', '\n', ' ', ' ', ' ', ' ']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '9', '9', '0', '0', '9', '9', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '"', '\x04', '\x10', '\x0e', '\n', 'C', ']', '\x1e', '\x02', '\x07', '\x1c', 'M', 'U', '\x01', '=', 'r', '\x10', '\x10', '\x10', '\x10', '@', 'I', 'J', 'b', 'g', '\x0e', 'R', 'G', 'B', '\x18', '\x0c', '\t', 'M', '\x1e', '\x0b', 'U', '\\', 'U', '@', '\x11', '\n']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x02', '\x00', 'l', 'e', 'd', '(', '0', 'x', '3', '3', '0', '0', '3', '3', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '9', '9', '0', '0', '9', '9']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x02', '\x00', 'l', 'e', 'd', '(', '0', 'x', '3', '3', '0', '0', '3', '3', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x0c', '\x04', '&', '~', 'f', 'c', '"', 'H', '7', '\x14', '5', ',', '`', '6', 'a', '.', 'g', 'Y', '\x11', ',', '+', 'J', 'O', 'Q', 'Q', '4', '&', '@', '\x16', '!', 'k', '-', '5', '9', ':', '>', '\x00', '\x02', 'o', '&', 'o', '\x04']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x08', '\x00', ' ', 'p', 'y', 'c', 'o', 'm', '\r', '\n', 'i', 'm', 'p', 'o', 'r', 't', ' ', 't', 'i', 'm', 'e', '\r', '\n', '\r', '\n', 'p', 'y', 'c', 'o', 'm', '.', 'h', 'e', 'a', 'r', 't', 'b', 'e', 'a', 't', '(', 'F']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '9', '9', '0', '0', '9', '9', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '@', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', 'C', 'C', '0', '0', 'C', 'C', ')', '\r', '\n', ' ', ' ', ' ', ' ']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '9', '9', '0', '0', '9', '9']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\x02', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '0', '0', '0', '0', '0', '0', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '3']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x02', '\x00', 'l', 'e', 'd', '(', '0', 'x', '3', '3', '0', '0', '3', '3', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l', 'e', 'e', 'p', '(', '1', ')', '\r', '\n', ' ', ' ', ' ', ' ', 'p', 'y']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x02', '\x10', 'E', 'h', 'n', '\x08', '\x10', 'X', '\x13', 'G', 'Y', ']', 'V', '\x1d', 'Z', 'a', 'o', 'E', 'P', '\x08', '\x11', ']', 'd', 'g', 'E', '\x0e', 'S', 'L', '\x15', '\x1c', '\x13', 'G', '\\', '\x07', '\x7f', 'm', 'B', 'L', 'E', 'D', 'X', 'I']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\x01', ')', '\r', '\n', 'p', 'y', 'c', 'o', 'm', '.', 'h', 'e', 'a', 'r', 't', 'b', 'e', 'a', 't', '(', 'T', 'r', 'u', 'e', ')', '\r', '\n', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x02', '\x04', '\x0b', '\x07', '\x08', 'M', 'T', 'P', '\x03', 'K', '\x03', '\x03', '\x03', '\x03', '\x1a', '>', '#', '-', '*', '\x00', '\x00', 'T', 'I', '\x19', '\x0c', 'C', '\x16', 'B', '\x16', '\t', '\x15', 'M', 'A', '\x01', '<', '#', '-', '*', '\x00', '\x00', 'P', 'Y']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', '\n', ' ', ' ', ' ', ' ', 'p', 'y', 'c', 'o', 'm', '.', 'r', 'g', 'b', 'l', 'e', 'd', '(', '0', 'x', '9', '9', '0', '0', '9', '9', ')', '\r', '\n', ' ', ' ', ' ', ' ', 't', 'i', 'm', 'e', '.', 's', 'l']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x10', '\x04', 'D', 'B', '\x01', '\x04', '\r', 'F', '\x1e', '\x08', 'J', '\x13', '\x1d', '\x1d', '\x13', 'C', '\\', 'y', '*', 'Y', 'O', 'U', 'R', 'T', '\n', '\x02', '\x01', 'K', 'S', '\x04', '\x00', '\x17', '\x15', '\t', '<', '#', 'd', 'g', 'P', 'O', 'R', 'T']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x01', '\x0e', '-', '!', 'k', '6', '?', '+', 'w', '9', ':', '6', 'r', ',', 'g', 's', 'X', '^', '>', '&', 'q', '\x14', 'G', 'y', '}', '|', '7', '.', '\x08', '\x02', ' ', '~', '{', '}', '8', '\x01', '\x17', 'm', '?', 'z', 'A']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x06', '\x00', '\r', '\t', '\x17', 'M', '\x19', 'u', '9', 'U', '_', 'B', '\x13', 'Z', '\t', 'd', 'd', '\x00', 'R', 'A', 'N', '\x13', '\x0c', 'E', 'W', '\x07', 'I', 'a', 'o', 'E', 'P', '\x08', '\x11', 'Y', 't', 'i', 'O', 'M', '\x0e', 'R', '\x17', '\x1b']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x08', '\x00', ' ', 'p', 'y', 'c', 'o', 'm', '\r', '\n', 'i', 'm', 'p', 'o', 'r', 't', ' ', 't', 'i', 'm', 'e', '\r', '\n', '\r', '\n', 'p', 'y', 'c', 'o', 'm', '.', 'h', 'e', 'a', 'r', 't', 'b', 'e', 'a', 't', '(', 'F']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x08', '\x00', ' ', 'p', 'y', 'c', 'o', 'm', '\r', '\n', 'i', 'm', 'p', 'o', 'r', 't', ' ', 't', 'i', 'm', 'e', '\r', '\n', '\r', '\n', 'p', 'y', 'c', 'o', 'm', '.', 'h', 'e', 'a', 'r', 't', 'b', 'e', 'a', 't', '(', 'F']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x02', '!', '1', '\x01', '\x03', '=', 'g', 'h', '0', ';', '{', '(', '~', 'c', 'r', 't', 'b', 'e', 'a', 't', '(', 'P', 'b', '{', 'o', 'j', 'P', '\x14', '\x02', '\x07', '\x1c', 'M', 'U', '\x01', '=', 'r', '\x19', '\x19', '\x10', '\x10', 'I', '@']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x04', ' ', '\x15', '\x05', '\x1e', '\x00', '\x07', '~', 'f', '\x03', '\n', '\x02', '\x08', 'X', '\t', 'd', 'd', '\x00', 'R', 'A', 'N', '\x17', '\x1c', 'K', ']', 'D', '\x14', '\x7f', 'm', 'B', 'L', 'E', 'D', 'X', 'I', '\x1b', 'V', 'T', '\x1e', 'B', '^', '[']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x00', 'z', 'Y', 'C', 'O', 'M', '^', '\x0b', '\x04', '\r', '\x01', 'K', '\x16', 'O', 'R', '\x14', 'U', 'T', '\x18', '\x00', 'H', '\t', '\x10', '=', ':', '\x19', '\x19', '\t', '-', '~', 'I', 'M', 'E', '\x0e', '\x07', '\x05', '\x08', '\x00', '^', '[', '_']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x01', '@', '\x06', '\n', '\x1d', '\x06', 'C', 'N', 'o', 'f', 'E', 'D', '\x08', '\x10', '\x08', 'O', 'U', '_', ']', '\x18', 'D', 'N', 'o', 'f', 'E', 'D', '\x08', '\x10', '\x0c', '*', '.', 'U', '\x1e', '0', '/', 'L', 'h', 'z', '\x08', '\x11', '\t', '-']
+['\x00', '\x01', '\x02', '\x00', '\r', '(', '\x12', '\x00', 'O', 'E', '\t', 'I', 'Y', '\x16', '\x1d', 'C', 'I', '\x10', '\x1e', '\x1e', '\t', '}', '\x7f', 'T', '\x00', 'Y', 'O', '\x01', '\x1b', 'M', '\x06', 'A', '\x17', '\t', 'E', '\r', '\x15', 'Z', 'T', '\x08', '\x00', '\x00', 'I', 'M', 'P', 'O', '\x02', '\r']
+Traceback (most recent call last):
+  File "<stdin>", line 119, in <module>
+IndexError: list index out of range
+>

@@ -1,0 +1,87 @@
+Pycom MicroPython 1.18.2.r1 [v1.8.6-849-d6b3616] on 2019-02-22; LoPy4 with ESP32
+Type "help()" for more information.
+>>> 
+>>> Running C:\Users\thoma\Downloads\LoPy_Decoder_File.py
+
+>>> 
+>>> 
+Connected!
+Update status is: 1
+Packet received
+[0, 1, 250, 0, 13, 40, 16, 0, 35, 32, 109, 97, 105, 110, 46, 112, 121, 32, 45, 45, 32, 112, 117, 116, 32, 121, 111, 117, 114, 32, 99, 111, 100, 101, 32, 104, 101, 114, 101, 33, 13, 10, 105, 109, 112, 111, 114, 116]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 4, 0, 97, 108, 115, 101, 41, 13, 10, 102, 111, 114, 32, 105, 32, 105, 110, 32, 114, 97, 110, 103, 101, 40, 50, 41, 58, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 1, 0, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 54, 54, 48, 48, 54, 54, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 0, 64, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 67, 67, 48, 48, 67, 67, 41, 13, 10, 32, 32, 32, 32]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 0, 16, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 0, 4, 103, 98, 108, 101, 100, 40, 48, 120, 51, 51, 48, 48, 51, 51, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 0, 1, 41, 13, 10, 112, 121, 99, 111, 109, 46, 104, 101, 97, 114, 116, 98, 101, 97, 116, 40, 84, 114, 117, 101, 41, 13, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 8, 0, 32, 112, 121, 99, 111, 109, 13, 10, 105, 109, 112, 111, 114, 116, 32, 116, 105, 109, 101, 13, 10, 13, 10, 112, 121, 99, 111, 109, 46, 104, 101, 97, 114, 116, 98, 101, 97, 116, 40, 70]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 0, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 57, 57, 48, 48, 57, 57]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 4, 18, 56, 24, 26, 42, 100, 3, 88, 117, 100, 115, 32, 35, 123, 53, 115, 117, 50, 121, 111, 126, 88, 11, 31, 3, 58, 13, 90, 121, 55, 38, 32, 59, 37, 119, 97, 100, 46, 102, 103, 97]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 1, 0, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 54, 54, 48, 48, 54, 54, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13]
+Packet discarded
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 2, 1, 69, 104, 110, 88, 73, 27, 92, 94, 30, 88, 86, 82, 91, 121, 104, 69, 65, 84, 8, 32, 27, 24, 0, 7, 126, 102, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32, 112, 121]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 2, 4, 11, 7, 8, 77, 84, 80, 3, 75, 3, 3, 3, 3, 26, 62, 35, 45, 42, 0, 0, 84, 73, 25, 12, 67, 22, 66, 22, 9, 21, 77, 65, 1, 60, 35, 45, 42, 0, 0, 80, 89]
+There is a bug in the system, the thing got reduced and still did not get a unique pivot position. For some reason it still works with this bug.
+Packet discarded
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 0, 128, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 57, 57, 48, 48, 57, 57, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 0, 1, 41, 13, 10, 112, 121, 99, 111, 109, 46, 104, 101, 97, 114, 116, 98, 101, 97, 116, 40, 84, 114, 117, 101, 41, 13, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Packet discarded
+Is the generation decoded? 0
+Packet received
+[0, 1, 250, 0, 13, 40, 4, 8, 25, 90, 69, 85, 25, 59, 60, 79, 98, 120, 0, 73, 0, 73, 26, 73, 31, 4, 64, 20, 9, 77, 87, 89, 18, 60, 35, 45, 42, 0, 0, 80, 89, 19, 22, 14, 65, 31, 73, 16]
+Packet inserted
+Packets needed to reduce generation number0is: [16]
+Sorting Generation 0 Succeeded
+Is the generation decoded? 1
+Generation0 decoded
+All generations are decoded
+b'# main.py -- put your code here!\r\nimport pycom\r\nimport time\r\n\r\npycom.heartbeat(False)\r\nfor i in range(2):\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x000000)\r\n    time.sleep(3)\r\npycom.heartbeat(True)\r'
+Update status is: 0
+File read
+b'# main.py -- put your code here!\r\nimport pycom\r\nimport time\r\n\r\npycom.heartbeat(False)\r\nfor i in range(2):\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x000000)\r\n    time.sleep(3)\r\npycom.heartbeat(True)\r'
+File has stuff in it
+>
+Pycom MicroPython 1.18.2.r1 [v1.8.6-849-d6b3616] on 2019-02-22; LoPy4 with ESP32
+Type "help()" for more information.
+>>>
