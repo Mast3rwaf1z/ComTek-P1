@@ -32,8 +32,8 @@ def Encode_Symbol(Vect_Gen, Vect_Enc, File_Size, Generation_Number):        # Ar
 # Header Format
 # [Full file size, #Generation, Generation size, Packet(Symbol) Size, Encoding row vector in bytes]
 # Full file size is two bytes. First to be multiplied with 255, second to be added after the multiplication. This makes it able to give sizes up to 63 kilobytes
-    File_Size1 = File_Size // (255*255)
-    File_Size2 = (File_Size - File_Size1 * (255*255)) // 255
+    File_Size1 = File_Size // (256*256)
+    File_Size2 = (File_Size - File_Size1 * (256*256)) // 256
     #if File_Size1 > 255:
         #print("Encode_Symbol ERROR: File size is larger than the supported size of 65,280 bytes")
         #global Send_File_Error
