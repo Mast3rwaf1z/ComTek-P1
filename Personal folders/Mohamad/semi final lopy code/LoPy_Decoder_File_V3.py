@@ -6,7 +6,8 @@ import ubinascii
 import struct
 import sys
 
-Generation_File_Size = 32*40                        # This is manually assigned, as I can't care anymore (Can be fixed by sending it from the gateway)
+Generation_File_Size = 32*40                        # This is manually assigned for now (Can be fixed by sending it from the gateway)
+Gen_Num = 0                                         # Hold the generation number that is being worked with
 Generations = []                                    # 3D matrix that holds a list of generations, which hold a list of the symbols
 Generations_Decoded = []                            # This 1D matrix indicates which generation have been decode, to not send any more coded symbols ot them
 Full_File_Size_Ran = 0                              # Is 1 when the variable is assigned, because don't mess with the global variabl grr
@@ -256,6 +257,12 @@ def Sort_Packets(Packet, File_Size = 3):
     Gen_Size = Loc_Packet[File_Size + 1]
     Symbol_Size = Loc_Packet[File_Size + 2]
 
+    # Check if the generation has already been decoded, if so don't send the coded symbol through the decoding algorithm
+    global Generations_Decoded
+    if Generations_Decoded[Gen_Num] == 1:
+        print("Generation already decoded. Packet discarded")
+        return 2                                                                                # 2 as a result tells the program to move into checking if all generations were decoded and making the file
+    
     # Get the coefficients out of the header and set them in a local list
     Coefficients_Start = File_Size + 3
     Coefficients_End =  File_Size + 3 + Floor_Div_Round_Up(Gen_Size, 8)
@@ -312,6 +319,7 @@ def Sort_Packets(Packet, File_Size = 3):
                 Res = Generations_Complete_Reduce(Sorted_Generation, Gen_Num, Gen_Size, Symbol_Size)
                 if Res == 1:
                     print("Generation reduced to reduced echelon form and uncoded symbols appended to Full_File_Data \n")
+                    return 2                                    # 2 as a result tells the program to move into checking if all generations were decoded and making the file
                 else:
                     print("The Generations_Complete_Reduce function returned an unexpected value. The value is: " + str(Res) + "\n")
 
@@ -399,7 +407,6 @@ s.setblocking(False)
 #   Update_Status = 0
 
 Update_Status = 1                               # Make this variable 0 if you don't want the lopy to update. Comment it if you want to use the system right above it
-Gen_Num = 0                                     # Shows the generation that the sensor is recieving from
 print("Update status is: " + str(Update_Status) + "\n")
 
 # If update mode is on then go into a file receiving loop
@@ -414,9 +421,9 @@ while Update_Status == 1:
         print("Packet received:")
         print(Packet)
         print("\n")
-        Sort_Packets(Packet)
+        Res = Sort_Packets(Packet)
 
-    if Generations_Decoded[Gen_Num] == 1:       # If the generation has been decoded send that info to the source so it stops sending packets from this generation and start with a new generation
+    if Res == 2:                                # If the generation has been decoded send that info to the source so it stops sending packets from this generation and start with a new generation
         print("Generation " + str(Gen_Num) + " decoded")
 
         # Send message telling it to move to the next generation
