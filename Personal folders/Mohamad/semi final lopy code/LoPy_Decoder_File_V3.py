@@ -247,7 +247,7 @@ def Sort_Packets(Packet, File_Size = 3):
     if Full_File_Size_Ran == 0:                                                                 # Don't get the full size more than once (Can't remember why maybe to save power?)
         global Full_File_Size
         for i in range(File_Size):
-            Full_File_Size = Full_File_Size + (Loc_Packet[i] * (255**(File_Size - 1 - i)))      # Get full file size out of file size headers
+            Full_File_Size = Full_File_Size + (Loc_Packet[i] * (256**(File_Size - 1 - i)))      # Get full file size out of file size headers
         Gen_Total = Floor_Div_Round_Up(Full_File_Size, Generation_File_Size)                    # Generation file size might not be needed
         Gen_Config(Gen_Total)                                                                   # Run the Generation list initiation function
         Full_File_Size_Ran += 1
