@@ -6,7 +6,6 @@ import ubinascii
 import struct
 import sys
 
-Generation_File_Size = 32*40                        # This is manually assigned for now (Can be fixed by sending it from the gateway)
 Gen_Num = 0                                         # Hold the generation number that is being worked with
 Generations = []                                    # 3D matrix that holds a list of generations, which hold a list of the symbols
 Generations_Decoded = []                            # This 1D matrix indicates which generation have been decode, to not send any more coded symbols ot them
@@ -242,14 +241,14 @@ def Generations_Decode(Coded_Symbol, Gen_Num, Gen_Size):
 # It also runs the function to reduce the generation into reduced echelon form
 # This can be seen as the main function, that integrates all the functions above
 def Sort_Packets(Packet, File_Size = 3):
-    Loc_Packet = Packet[:]                                                                      # Copy to a local packet (Just in case)
+    Loc_Packet = Packet[:]                                                                                      # Copy to a local packet (Just in case)
     global Full_File_Size_Ran
-    if Full_File_Size_Ran == 0:                                                                 # Don't get the full size more than once (Can't remember why maybe to save power?)
+    if Full_File_Size_Ran == 0:                                                                                 # Don't get the full size more than once (Can't remember why maybe to save power?)
         global Full_File_Size
         for i in range(File_Size):
-            Full_File_Size = Full_File_Size + (Loc_Packet[i] * (256**(File_Size - 1 - i)))      # Get full file size out of file size headers
-        Gen_Total = Floor_Div_Round_Up(Full_File_Size, Generation_File_Size)                    # Generation file size might not be needed
-        Gen_Config(Gen_Total)                                                                   # Run the Generation list initiation function
+            Full_File_Size = Full_File_Size + (Loc_Packet[i] * (256**(File_Size - 1 - i)))                      # Get full file size out of file size headers
+        Gen_Total = Floor_Div_Round_Up(Full_File_Size, Loc_Packet[File_Size + 1] * Loc_Packet[File_Size + 2]    # Generation file size might not be needed
+        Gen_Config(Gen_Total)                                                                                   # Run the Generation list initiation function
         Full_File_Size_Ran += 1
 
     # Get the headers out and set them in a local varaible
