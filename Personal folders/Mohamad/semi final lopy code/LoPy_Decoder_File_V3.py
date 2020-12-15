@@ -500,4 +500,4 @@ execfile(File_Name)                        # Dangerous. It is possible to brick 
 
 # We will clean the file before sending it with the report
 # This file has added a lot of prints to print out the entire process. If you don't like them, go around and comment them out
-# This file has not been tested yet. Delete this comment when it is tested and works
+# This file has been tested. The amount of prints crash the LoPy. It works when the unnecesarry prints are commented
