@@ -5,3 +5,5 @@ Because a larger part of the group have limited experience with git repositories
 it serves both as a convenience to new users and existing due to the ability to ignore each others file trees. 
 
 incidentally this structure also serves as a convenient file sharing platform during the project period.
+
+FINAL CODE IS THE NEWEST VERSION IN THE MAIN REPOSITORY
