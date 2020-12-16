@@ -1,0 +1,20 @@
+Parameters
+File Size: 506 bytes
+Symbol size: 40 bytes
+Generations: 1
+Generation size: 13
+Last generation's size: 13
+Raw packets sent: 13
+Random packets sent: 100
+
+test results: 
+1: Success
+2: Success
+3: Failed #LoPy Crashed
+4: Success
+5: Success
+6: Success #Might have been extra packets from previous test but irrelevant due to the time between updates being possibly multiple months
+7: Success
+8: Success
+9: Failed #Update_Status was probably set to 0 somehow before receiving any files (rolled natural 1 and critically failed ;))
+10: Success

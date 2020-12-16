@@ -1,0 +1,114 @@
+Pycom MicroPython 1.18.2.r1 [v1.8.6-849-d6b3616] on 2019-02-22; LoPy4 with ESP32
+Type "help()" for more information.
+>>> 
+>>> Running C:\Users\thoma\Downloads\LoPy_Decoder_File.py
+
+>>> 
+>>> 
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Connected!
+Packet received
+[0, 0, 214, 0, 6, 40, 4, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 51, 51, 48, 48, 51, 51, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 32, 35, 32, 109, 97, 105, 110, 46, 112, 121, 32, 45, 45, 32, 112, 117, 116, 32, 121, 111, 117, 114, 32, 99, 111, 100, 101, 32, 104, 101, 114, 101, 33, 13, 10, 35, 32, 77, 111, 104, 97]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 8, 10, 13, 10, 112, 121, 99, 111, 109, 46, 104, 101, 97, 114, 116, 98, 101, 97, 116, 40, 70, 97, 108, 115, 101, 41, 13, 10, 119, 104, 105, 108, 101, 32, 84, 114, 117, 101, 58, 13, 10]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 32, 35, 32, 109, 97, 105, 110, 46, 112, 121, 32, 45, 45, 32, 112, 117, 116, 32, 121, 111, 117, 114, 32, 99, 111, 100, 101, 32, 104, 101, 114, 101, 33, 13, 10, 35, 32, 77, 111, 104, 97]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 8, 10, 13, 10, 112, 121, 99, 111, 109, 46, 104, 101, 97, 114, 116, 98, 101, 97, 116, 40, 70, 97, 108, 115, 101, 41, 13, 10, 119, 104, 105, 108, 101, 32, 84, 114, 117, 101, 58, 13, 10]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 2, 101, 112, 40, 50, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 48, 48, 48, 48, 48, 48, 41, 13, 10, 32, 32, 32, 32, 116]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 1, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 50, 41, 13, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Packet inserted
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 3, 12, 29, 77, 28, 90, 97, 111, 69, 80, 8, 18, 89, 116, 105, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 48, 48, 48, 48, 48, 48, 41, 13, 10, 32, 32, 32, 32, 116]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 8, 10, 13, 10, 112, 121, 99, 111, 109, 46, 104, 101, 97, 114, 116, 98, 101, 97, 116, 40, 70, 97, 108, 115, 101, 41, 13, 10, 119, 104, 105, 108, 101, 32, 84, 114, 117, 101, 58, 13, 10]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 32, 35, 32, 109, 97, 105, 110, 46, 112, 121, 32, 45, 45, 32, 112, 117, 116, 32, 121, 111, 117, 114, 32, 99, 111, 100, 101, 32, 104, 101, 114, 101, 33, 13, 10, 35, 32, 77, 111, 104, 97]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 1, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 50, 41, 13, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 32, 35, 32, 109, 97, 105, 110, 46, 112, 121, 32, 45, 45, 32, 112, 117, 116, 32, 121, 111, 117, 114, 32, 99, 111, 100, 101, 32, 104, 101, 114, 101, 33, 13, 10, 35, 32, 77, 111, 104, 97]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 2, 101, 112, 40, 50, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 48, 48, 48, 48, 48, 48, 41, 13, 10, 32, 32, 32, 32, 116]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 38, 102, 112, 101, 115, 48, 26, 71, 63, 52, 46, 127, 58, 59, 127, 127, 125, 38, 59, 112, 36, 45, 117, 55, 116, 103, 52, 29, 82, 117, 98, 117, 49, 80, 110, 68, 101, 67, 60, 36, 112]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 12, 42, 45, 42, 80, 9, 26, 12, 2, 67, 70, 23, 6, 16, 24, 7, 1, 73, 68, 80, 117, 82, 92, 67, 86, 26, 36, 7, 125, 72, 73, 76, 69, 84, 61, 31, 16, 75, 73, 97, 111]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 4, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 51, 51, 48, 48, 51, 51, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 4, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 51, 51, 48, 48, 51, 51, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 3, 12, 29, 77, 28, 90, 97, 111, 69, 80, 8, 18, 89, 116, 105, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 48, 48, 48, 48, 48, 48, 41, 13, 10, 32, 32, 32, 32, 116]
+Packet discarded
+Unknown result
+Is the generation decoded? 0
+Packet received
+[0, 0, 214, 0, 6, 40, 18, 8, 17, 76, 18, 126, 108, 121, 0, 72, 69, 82, 21, 116, 105, 6, 0, 94, 29, 21, 22, 76, 21, 29, 75, 95, 21, 61, 58, 89, 93, 64, 95, 91, 121, 42, 84, 73, 77, 69, 121]
+Packet inserted
+Packets needed to reduce generation number0is: [19]
+Sorting Generation 0 Succeeded
+Is the generation decoded? 1
+Generation0 decoded
+All generations are decoded
+b'# main.py -- put your code here!\r\n# Mohamad Was here\r\nimport pycom\r\nimport time\r\n\r\npycom.heartbeat(False)\r\nwhile True:\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(2)\r\n    pycom.rgbled(0x000000)\r\n    time.sleep(2)\r\n'
+File read
+b'# main.py -- put your code here!\r\n# Mohamad Was here\r\nimport pycom\r\nimport time\r\n\r\npycom.heartbeat(False)\r\nwhile True:\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(2)\r\n    pycom.rgbled(0x000000)\r\n    time.sleep(2)\r\n'
+File has stuff in it
