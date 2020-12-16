@@ -19,9 +19,10 @@ Pivot_Pos_Ran = []                                  # Is 1 when the pivot positi
 Packets_Needed_To_Decode_Generation = []            # This list contains the number of packets received before a generation was decoded. The positions of the list represent the generation number
 
 # Converts a list of decimal bytes (Bytearray) into a list of zeros and ones
-def Bytes_to_Bits(ByteList):                        #Argument(List with bytes)
-    LocList = ByteList[:]
-    ResMat = []
+def Bytes_to_Bits(ByteList):                        # Argument(List with bytes)
+    LocList = ByteList[:]                           # Copy argument list into a local list
+    ResMat = []                                     # Make a list to be filled with the bits
+    # Cover the bytes list into a bits list
     for i in range(len(LocList)):
         x = LocList[i]
         ResMat.append(x // 128)
@@ -144,29 +145,30 @@ def Generations_Complete_Reduce(Gen, Gen_Num, Gen_Size, Symbol_Size):           
     return 1                                                                    # Return a success value
 
 # This function takes a coded symbol and performs the decoding algorithm on it
-def Generations_Decode(Coded_Symbol, Gen_Num, Gen_Size):
-    Loc_Symbol = Coded_Symbol[:]
-    Useless_Symbol = 0
-    Position = -1
+def Generations_Decode(Coded_Symbol, Gen_Num, Gen_Size):                        # Arguments(Coded symbol with coefficients vector, Generation number of the symbol, Generation size of the symbol)
+    Loc_Symbol = Coded_Symbol[:]                                                # Copy the list with coefficients and coded symbol into a local list
+    Useless_Symbol = 0                                                          # Create the useless symbol indicator
+    Position = -1                                                               # Create the position indicator, which indicates the position of the first 1 in the coefficients vector
 
     # Check the position of the first 1, if there are not 1s then it is useless
 
-    for i in range(Gen_Size):
-        if Loc_Symbol[i] == 1:
-            Useless_Symbol = 0
-            Position = i
-            break
-        else:
-            Useless_Symbol = 1
-    if Useless_Symbol == 1:
-        #print("Packet is empty \n")
-        return -1
+    for i in range(Gen_Size):                                                   # Check the elements of the coefficients vector
+        if Loc_Symbol[i] == 1:                                                  # If a 1 is found
+            Useless_Symbol = 0                                                  # Declare the symbol as useful
+            Position = i                                                        # Assign the position of the one
+            break                                                               # Stop further checking
+        else:                                                                   # If no 1 is found
+            Useless_Symbol = 1                                                  # Declare the symbol as useless
+    if Useless_Symbol == 1:                                                     # If the symbol is useless
+        #print("Packet is empty \n")                                            # Print the reason
+        return -1                                                               # Return discarded symbol code
 
     # Check if this can be used without reducing it (It can make a pivot position without reducing)
 
-    if Pivot_Pos[Gen_Num][Position] == 0:
-        Pivot_Pos[Gen_Num][Position] = 1
-        Loc_Symbol.insert(0, Position)
+    if Pivot_Pos[Gen_Num][Position] == 0:                                       # Check if this generation does not have a pivot position that this symbol can occupy
+        Pivot_Pos[Gen_Num][Position] = 1                                        # If not then change the value into 1 (Pivot position available)
+        Loc_Symbol.insert(0, Position)                                          # Insert the pivot position indicator at the start of the symbol (Element used in sorting algorithm)
+        # The prints bellow are used to visualise what happens with the symbol
         #print("Packet inserted without row operations \n")
         #if len(Generations[Gen_Num]) == 0:
             #print("[]")
@@ -175,57 +177,58 @@ def Generations_Decode(Coded_Symbol, Gen_Num, Gen_Size):
         #print("↑")
         #print(Loc_Symbol)
         #print("\n")
-        Generations[Gen_Num].append(Loc_Symbol)
-        return 1
+        Generations[Gen_Num].append(Loc_Symbol)                                 # Add the symbol to the echelon form generation
+        return 1                                                                # Return packet inserted value
 
     # Sort the generation
 
-    Generations[Gen_Num] = Generations_Sort(Gen_Num, Gen_Size)
+    Generations[Gen_Num] = Generations_Sort(Gen_Num, Gen_Size)                  # Else sort the generation to start doing row operations
 
     # Go and do the reduction using all currently available packets in the generation (You will have to remove the 2 things at the start again)
 
-    #print("-------------------------------------------Doing Row Operations------------------------------------------------")
-    a = Loc_Symbol[:]
-    for i in range(len(Generations[Gen_Num])):
-        Initial_Pivot_Pos = Generations[Gen_Num][i][0]
-        if a[Initial_Pivot_Pos] == 1:
-            b = Generations[Gen_Num][i][:]
-            b.pop(0)
+    #print("-------------------------------------------Doing Row Operations------------------------------------------------")   # This is used to make the terminal more readable
+    a = Loc_Symbol[:]                                                           # Copy the local symbol into a list to be XoR'ed
+    for i in range(len(Generations[Gen_Num])):                                  # Go through all the symbols in the echelon form generation
+        Initial_Pivot_Pos = Generations[Gen_Num][i][0]                          # Get the pivot position of the row we are using to reduce
+        if a[Initial_Pivot_Pos] == 1:                                           # If the row can actually reduce the symbol, then proceed with XoR'ing
+            b = Generations[Gen_Num][i][:]                                      # Copy the row to use for reducing into a list to be XoR'ed
+            b.pop(0)                                                            # Remove the pivot position element
+            # The prints bellow are used to visualise what happens with the symbol
             #print("Removing the 1 in position " + str(Initial_Pivot_Pos) + "\n")
             #print(b)
             #print("XoR")
             #print(list(a))
-            a = bytes([a ^ b for a, b in zip(a, b)])
+            a = bytes([a ^ b for a, b in zip(a, b)])                            # XoR
             #print("=")
             #print(list(a))
             #print("\n")
-        #else:
+        #else:                                                                  # This else is only needed for prints to say that no XoR was performed
             #print("Position " + str(Initial_Pivot_Pos) + " is 0. No need to XoR with")
             #print(Generations[Gen_Num][i][1:])
-    a = list(a)
-    Loc_Symbol = a[:]
+    a = list(a)                                                                 # When a list is XoR'ed it become a bytes object, so transform the object into a list again
+    Loc_Symbol = a[:]                                                           # Make the local symbol into the fully reduced symbol
     #print("---------------------------------------------------Done--------------------------------------------------------")
 
     # After it is reduced do the same check for the position of 1
 
-    for i in range(Gen_Size):
-        if Loc_Symbol[i] == 1:
-            Useless_Symbol = 0
-            Position = i
-            break
-        else:
-            Useless_Symbol = 1
-    if Useless_Symbol == 1:
-        #print("Packet is dependent \n")
-        return -1
+    for i in range(Gen_Size):                                                   # Check the elements of the coefficients vector
+        if Loc_Symbol[i] == 1:                                                  # If a 1 is found
+            Useless_Symbol = 0                                                  # Declare the symbol as useful
+            Position = i                                                        # Assign the position of the one
+            break                                                               # Stop further checking
+        else:                                                                   # If no 1 is found
+            Useless_Symbol = 1                                                  # Declare the symbol as useless
+    if Useless_Symbol == 1:                                                     # If the symbol is useless
+        #print("Packet is dependent \n")                                        # Print the reason
+        return -1                                                               # Return discarded symbol code
 
-    # One last check to see if the symbol is dependent
-    # The recent change in the algorithm should have fixed the bug that this test detects, but I am leaving it for now
+    # One last check to see if the symbol is useable
 
-    if Pivot_Pos[Gen_Num][Position] == 0:
-        Pivot_Pos[Gen_Num][Position] = 1
-        Loc_Symbol.insert(0, Position)
-        #print("Packet inserted after row operations \n")
+    if Pivot_Pos[Gen_Num][Position] == 0:                                       # Check if this generation does not have a pivot position that this symbol can occupy
+        Pivot_Pos[Gen_Num][Position] = 1                                        # If not then change the value into 1 (Pivot position available)
+        Loc_Symbol.insert(0, Position)                                          # Insert the pivot position indicator at the start of the symbol (Element used in sorting algorithm)
+        # The prints bellow are used to visualise what happens with the symbol
+        #print("Packet inserted without row operations \n")
         #if len(Generations[Gen_Num]) == 0:
             #print("[]")
         #else:
@@ -233,28 +236,28 @@ def Generations_Decode(Coded_Symbol, Gen_Num, Gen_Size):
         #print("↑")
         #print(Loc_Symbol)
         #print("\n")
-        Generations[Gen_Num].append(Loc_Symbol)
-        return 1
+        Generations[Gen_Num].append(Loc_Symbol)                                 # Add the symbol to the echelon form generation
+        return 1                                                                # Return symbol inserted value
     else:
-        print("There is a bug in the system, the thing got reduced and still did not get a unique pivot position. For some reason it still works with this bug.")
-        #print(Loc_Symbol)
+        print("There is a bug in the system, the thing got reduced and still did not get a unique pivot position. For some reason it still works with this bug.")   # Print the result if this check fails
+        #print(Loc_Symbol)                                                      # Print the symbol out
         #print("\n")
-        return -1
+        return -1                                                               # Return discarded symbol code
 
 
 # The function reads the header of the coded packet, then sends the coded symbols to the decoding function
 # It also runs the function to reduce the generation into reduced echelon form
 # This can be seen as the main function, that integrates all the functions above
-def Sort_Packets(Packet, File_Size = 3):
-    Loc_Packet = Packet[:]                                                                      # Copy to a local packet (Just in case)
+def Sort_Packets(Packet, File_Size = 3):                                                        # Arguments(Packet to work with, Number of bytes in file size header(Optional))
+    Loc_Packet = Packet[:]                                                                      # Copy the packet to a local list
     global Full_File_Size_Ran
-    if Full_File_Size_Ran == 0:                                                                 # Don't get the full size more than once (Can't remember why maybe to save power?)
+    if Full_File_Size_Ran == 0:                                                                 # Don't get the full size more than once in or amount of generations more than once
         global Full_File_Size
         for i in range(File_Size):
             Full_File_Size = Full_File_Size + (Loc_Packet[i] * (256**(File_Size - 1 - i)))      # Get full file size out of file size headers
-        Gen_Total = Floor_Div_Round_Up(Full_File_Size, Generation_File_Size)                    # Generation file size might not be needed
+        Gen_Total = Floor_Div_Round_Up(Full_File_Size, Generation_File_Size)                    # Get the amount of generations from the header of the first packet
         Gen_Config(Gen_Total)                                                                   # Run the Generation list initiation function
-        Full_File_Size_Ran += 1
+        Full_File_Size_Ran += 1                                                                 # Change this value so this block of code does not run again
 
     # Get the headers out and set them in a local varaible
     Gen_Num = Loc_Packet[File_Size]
@@ -264,31 +267,31 @@ def Sort_Packets(Packet, File_Size = 3):
     # Check if the generation has already been decoded, if so don't send the coded symbol through the decoding algorithm
     global Generations_Decoded
     if Generations_Decoded[Gen_Num] == 1:
-        print("Generation already decoded. Packet discarded")
+        print("Generation already decoded. Packet discarded")                                   # Print feedback
         return 2                                                                                # 2 as a result tells the program to move into checking if all generations were decoded and making the file
 
     # Get the coefficients out of the header and set them in a local list
-    Coefficients_Start = File_Size + 3
-    Coefficients_End =  File_Size + 3 + Floor_Div_Round_Up(Gen_Size, 8)
-    Coefficients = Loc_Packet[Coefficients_Start:Coefficients_End]
+    Coefficients_Start = File_Size + 3                                                          # Set where the coefficients start in the packet
+    Coefficients_End =  File_Size + 3 + Floor_Div_Round_Up(Gen_Size, 8)                         # Set where the coefficients end in the packet
+    Coefficients = Loc_Packet[Coefficients_Start:Coefficients_End]                              # Get the coefficients vector out
 
     # Increase the number of packets used by one
-    Packets_Needed_To_Decode_Generation[Gen_Num] += 1
+    Packets_Needed_To_Decode_Generation[Gen_Num] += 1                                           # This is used to give feedback on the number of packets used to decode the generation
 
     # Make the coefficients list into a list of bits
     Coefficients_bits = Bytes_to_Bits(Coefficients)
     for i in range(len(Coefficients_bits) - Gen_Size):
-        Coefficients_bits.pop(0)                            # Remove the extra bits at the start
+        Coefficients_bits.pop(0)                                                                # Remove the extra bits at the start
 
     # Make a local list with the coded symbol
-    Symbol_Start = File_Size + 3 + Floor_Div_Round_Up(Gen_Size, 8)
-    Symbol = Loc_Packet[Symbol_Start:]
-    if Symbol_Size != len(Symbol):                          # Checks if the coded packet is missing anything from the symbol
+    Symbol_Start = File_Size + 3 + Floor_Div_Round_Up(Gen_Size, 8)                              # Set where the symbols start in the packet
+    Symbol = Loc_Packet[Symbol_Start:]                                                          # Get the coded symbol out
+    if Symbol_Size != len(Symbol):                                                              # Checks if the coded packet is missing anything from the symbol
         print("Packet_Remove_Header ERROR: Size of data in symbol is not same as in header. Packet will not be used")
-        return -1
-    Pivot_Position_Config(Gen_Num, Gen_Size)                # Run the pivot position list initializing function with this designated generation
+        return -1                                                                               # Return a fail code
+    Pivot_Position_Config(Gen_Num, Gen_Size)                                                    # Run the pivot position list initializing function with this designated generation
 
-    # Create the coded symbol that has to be guassian eliminated
+    # Create the coded symbol that has to be guassian eliminated (Coefficients vector + coded symbol)
     Coded_Symbol = Coefficients_bits
     for i in range(len(Symbol)):
         Coded_Symbol.append(Symbol[i])
@@ -297,9 +300,9 @@ def Sort_Packets(Packet, File_Size = 3):
 
     #print("Decoding algorithm start:\n")
     Res = Generations_Decode(Coded_Symbol, Gen_Num, Gen_Size)
-    if Res == -1:
+    if Res == -1:                                                                               # If symbol was discraded
         print("Decoding algorithm end.\nResult: Packet discarded \n")
-    elif Res == 1:
+    elif Res == 1:                                                                              # If symbol was inserted
         print("Decoding algorithm end.\nResult: Packet inserted \n")
     else:
         print("Decoding algorithm end.\nResult: Unknown result \n")
@@ -308,30 +311,29 @@ def Sort_Packets(Packet, File_Size = 3):
 
     if len(Generations[Gen_Num]) == Gen_Size:
         global Pivot_Pos
-        Num_Pivots = Pivot_Pos[Gen_Num][0]
-        for i in range(len(Pivot_Pos[Gen_Num]) - 1):
-            Num_Pivots = Num_Pivots + Pivot_Pos[Gen_Num][i + 1]
-        if Num_Pivots != Gen_Size:
+        Num_Pivots = Pivot_Pos[Gen_Num][0]                                                      # This variable contains the number of pivot positions that the echelon form generation has, which should be equal to the generation size
+        for i in range(len(Pivot_Pos[Gen_Num]) - 1):                                            # This loop adds the number of pivot positions to Num_Pivots
+            Num_Pivots = Num_Pivots + Pivot_Pos[Gen_Num][i + 1]                                 
+        if Num_Pivots != Gen_Size:                                                              # If the generation failed in becoming echelon form then send feedback
             print("There is a bug, the generation has enough symbols inside, but they do not form a pivot position \n")
-        else:
-            print("Number of packets needed to reduce generation number " + str(Gen_Num) + " is: " + str(Packets_Needed_To_Decode_Generation) + "\n")
-            Sorted_Generation = Generations_Sort(Gen_Num, Gen_Size)
-            if Sorted_Generation == -1:
+        else:                                                                                   # Else send feedback on the amount of packets needed to reduce the generation and reduce the generation into reduced echelon form
+            print("Number of packets needed to reduce generation number " + str(Gen_Num) + " is: " + str(Packets_Needed_To_Decode_Generation[Gen_Num]) + "\n")
+            Sorted_Generation = Generations_Sort(Gen_Num, Gen_Size)                             # Sort the generation before reducing it to reduced echelon form
+            if Sorted_Generation == -1:                                                         # If the sorting failed then send feedback that it failed
                 print("Sorting Generation " + str(Gen_Num) + " failed \n")
-            else:
+            else:                                                                               # Else send feedback that the sorting succeeded
                 print("Sorting Generation " + str(Gen_Num) + " Succeeded \n")
-                Res = Generations_Complete_Reduce(Sorted_Generation, Gen_Num, Gen_Size, Symbol_Size)
-                if Res == 1:
+                Res = Generations_Complete_Reduce(Sorted_Generation, Gen_Num, Gen_Size, Symbol_Size)    # Reduce the generation into reduced echelon form
+                if Res == 1:                                                                    # If it returns a success then send feedback that it succeeded
                     print("Generation reduced to reduced echelon form and uncoded symbols appended to Full_File_Data \n")
-                    return 2                                    # 2 as a result tells the program to move into checking if all generations were decoded and making the file
-                else:
+                    return 2                                                                    # 2 as a result tells the program to move into checking if all generations were decoded and making the file
+                else:                                                                           # Else send feedback with the different value it returned
                     print("The Generations_Complete_Reduce function returned an unexpected value. The value is: " + str(Res) + "\n")
 
 
 
 
 # create an OTAA authentication parameters
-dev_eui = ubinascii.unhexlify('be3f661454d53eae')           # possibly the wrong value but the uplink transmissions work without it
 app_eui = ubinascii.unhexlify('0000000000000000')
 app_key = ubinascii.unhexlify('c46d071ad49b09ce5d776f2981349ba0')
 
@@ -406,25 +408,23 @@ s.setblocking(False)
 #else:
 #   Update_Status = 0
 
-Update_Status = 1                               # Make this variable 0 if you don't want the lopy to update. Comment it if you want to use the system right above it
-print("Update status is: " + str(Update_Status) + "\n")
-
+Update_Status = 1                                                   # Set the update status to on. Make this variable 0 if you don't want the lopy to update. Comment it if you want to use the system right above it
+print("Update status is: " + str(Update_Status))                    # Print the update status out
 # If update mode is on then go into a file receiving loop
 
 while Update_Status == 1:
-    Packet_Byte = s.recv(64)                    # Receive the packet in byte for
-    if Packet_Byte == b'':                      # If packet is empty try and receive a new packet
-        #print(Packet_Byte)
+    Packet_Byte = s.recv(64)                                        # Receive the packet in byte for
+    if Packet_Byte == b'':                                          # If packet is empty try and receive a new packet
         continue
     else:
-        Packet = list(Packet_Byte)              # Put packet in list
-        print("Packet received:")
-        print(Packet)
+        Packet = list(Packet_Byte)                                  # Put packet in list
+        print("Packet received:")                                   # Print that the packet was received
+        print(Packet)                                               # Print the packet that was received
         print("\n")
-        Res = Sort_Packets(Packet)
+        Res = Sort_Packets(Packet)                                  # Send the packet throught the decoding algorithm
 
-    if Res == 2:                                # If the generation has been decoded send that info to the source so it stops sending packets from this generation and start with a new generation
-        print("Generation " + str(Gen_Num) + " decoded")
+    if Res == 2:                                                    # If the generation has been decoded
+        print("Generation " + str(Gen_Num) + " decoded")            # Print which generation was decoded
 
         # Send message telling it to move to the next generation
         # Uncomment this part once we find out how to receive messages on the computer
@@ -436,31 +436,33 @@ while Update_Status == 1:
         #    if e.args[0] == 11:
         #        print("error sending")
         #time.sleep(1)
-    else:                                       # If generation is not done start from the start of the while loop
+    else:                                                           # If generation is not done start from the start of the while loop
         continue
 
-    Sum_Gen_Decoded = 0
-    for i in range(len(Generations)):           # Put all the number of generations together
+    Sum_Gen_Decoded = 0                                             # This variable has the number of generations that were decoded
+    for i in range(len(Generations)):                               # Put all the number of generations together
         Sum_Gen_Decoded += Generations_Decoded[i]
-    if Sum_Gen_Decoded == len(Generations):     # If all generations are decoded (Sum of elements in the list is equal to its length) The start with making the file
-
+    if Sum_Gen_Decoded == len(Generations):                         # If all generations are decoded (Sum of elements in the list is equal to its length) Then start with making the file
+        print("All generations are decoded")                        # Print that all the generations were decoded
+            
         # Make file using the file name and send that the file has been decoded
-
-        print("All generations are decoded")
-        File_Name = "Update.py"                 # File name assigned manually for now, as the code to receive from the server is not completed
-        File_Open = open(File_Name, "wb")       # Open file in write mode to completely wipe the file if it already exists
+        
+        File_Name = "Update.py"                                     # File name assigned manually for now
+        File_Open = open(File_Name, "wb")                           # Open file in write mode to completely wipe the file if it already exists
+        
         # Write the data from the decoded symbols into one full list and remove the extra zeros
+        
         for i in range(len(Full_File_Data)):
             for j in range(len(Full_File_Data[i])):
                 File_Data_List.append(Full_File_Data[i][j])
-        if len(File_Data_List) >= Full_File_Size:
+        if len(File_Data_List) >= Full_File_Size:                   # Check if the list of data is larger or equal to the file size from the header
             for i in range(len(File_Data_List) - Full_File_Size):
                 File_Data_List.pop(-1)
-        else:
+        else:                                                       # If not, then there was an error with the decoder
             print("Algorithm says all generations decoded, but the file is not complete")
-        print(bytes(File_Data_List))
-        File_Open.write(bytes(File_Data_List))  # Write everything in the file
-        File_Open.close()
+        
+        File_Open.write(bytes(File_Data_List))                      # Write everything in the file
+        File_Open.close()                                           # Close the file to save it
 
         # Try and send the Update Done message for 30 seconds, once every second. This is used to stop the computer from sending packets
         # Uncomment this part once we find out how to receive messages on the computer
@@ -473,29 +475,10 @@ while Update_Status == 1:
         #        if e.args[0] == 11:
         #            print("error sending")
         #    time.sleep(1)
-        Update_Status = 0
+        Update_Status = 0                                           # Set the update status to off
 
 
-print("Update status is: " + str(Update_Status))
-
-File_read = open(File_Name, "rb")
-File_Read = File_read.read()
-print("File read")
-print(File_Read)
-File_Write_Attempts = 0
-while File_Read == b'' and File_Write_Attempts < 10:
-    File_Read.close()
-    File_Open = open(File_Name, "ab")       # Open the now empty file in append mode to put the data in it. Might not be needed
-    File_Open.write(bytes(File_Data_List))
-    File_Open.close()
-    File_read = open(File_Name, "rb")
-    File_Read = File_read.read()
-    print("File read again")
-    print(File_Read)
-    File_Write_Attempts += 1
-else:
-    print("File has stuff in it")
-
+print("Update status is: " + str(Update_Status))                    # Print the update status out
 #execfile(File_Name)                        # Dangerous. It is possible to brick the LoPy by running the sent file. Only used for showcasing
 
 # This program has been tested. The amount of prints have crashed the LoPy. Therefore the prints have been commented
