@@ -19,7 +19,7 @@ Pivot_Pos_Ran = []                                  # Is 1 when the pivot positi
 Packets_Needed_To_Decode_Generation = []            # This list contains the number of packets received before a generation was decoded. The positions of the list represent the generation number
 
 # Converts a list of decimal bytes (Bytearray) into a list of zeros and ones
-def Bytes_to_Bits(ByteList):                #Argument(List with bytes)
+def Bytes_to_Bits(ByteList):                        #Argument(List with bytes)
     LocList = ByteList[:]
     ResMat = []
     for i in range(len(LocList)):
@@ -49,7 +49,7 @@ def Bytes_to_Bits(ByteList):                #Argument(List with bytes)
     return ResMat
 
 # Floor division usually rounds down. This function makes it round up instead
-def Floor_Div_Round_Up(x, y):
+def Floor_Div_Round_Up(x, y):   # Arguments(Number to be floor divided, Number to be floor divided with)
     a = x / y
     b = x // y
     if a != b:                  # If there are decimals then round up
@@ -57,13 +57,13 @@ def Floor_Div_Round_Up(x, y):
     else:
         return b
 
-def Dump_Mat(Matrix):
+# Prints a list with each element on its own line
+def Dump_Mat(Matrix):           # Argument(Matrix to be printed)
     for i in Matrix:
         print(i)
 
-# This function need to be adjusted beforehand, now it only works for generation size 32, symbol size 40
-# A way to make it work is to send some info in an initial packet. If there is time it will be explored
-def Gen_Config(Gen_Total):
+# Initiates the global lists
+def Gen_Config(Gen_Total):                          # Argument(The number of generations the file will have)
     for i in range(Gen_Total):
         Generations.append([])                      # Fill the list with the generation lists (Initiate generation list)
         Full_File_Data.append([])                   # Fill list with enough place for each generation (Initiate Fill_File_Data list)
@@ -72,72 +72,76 @@ def Gen_Config(Gen_Total):
         Generations_Decoded.append(0)               # Fill the list with zero states (Initiate Generations_Decoded list)
         Packets_Needed_To_Decode_Generation.append(0)
 
-
+# Further initiation for global lists that need it
 def Pivot_Position_Config(Gen_Num, Gen_Size):
     if Pivot_Pos_Ran[Gen_Num] == 0:                 # If the designated generation list was not filled, the proceed else do nothing
         for i in range(Gen_Size):
             Pivot_Pos[Gen_Num].append(0)            # Set 0s with the number of pivot positions in the generation
         Pivot_Pos_Ran[Gen_Num] = 1                  # Don't run this again for the same generation
 
-def Generations_Sort(Gen_Num, Gen_Size):
-    Loc_Gen = Generations[Gen_Num][:]
-    Sorted_Gen = []
-    for i in range(Gen_Size):
+        
+# This function sorts a generation by using the pivot position label at the start of each row
+def Generations_Sort(Gen_Num, Gen_Size):                        # Arguments(Generation number of the generation to sort, Generation size of the generation to sort)
+    Loc_Gen = Generations[Gen_Num][:]                           # Make a local copy of the generation
+    Sorted_Gen = []                                             # This list will be used to sore the generation
+    for i in range(Gen_Size):                                   # Make enough rows to sort the generation
         Sorted_Gen.append([])
 
     # Sort the generation
 
-    for i in range(len(Loc_Gen)):
-        Sorting_Pos = Loc_Gen[i][0]
-        for j in range(len(Loc_Gen[i])):
-            Sorted_Gen[Sorting_Pos].append(Loc_Gen[i][j])
+    for i in range(len(Loc_Gen)):                               # Go through the rows of the generation
+        Sorting_Pos = Loc_Gen[i][0]                             # Read the pivot position of the row
+        for j in range(len(Loc_Gen[i])):                        
+            Sorted_Gen[Sorting_Pos].append(Loc_Gen[i][j])       # Copy this row to its right position
 
-    # Check that it has sorted correctly, if yes pop out the pivot position indicator
+    # Check that it has sorted correctly
+    # If the generation is fully decoded pop out the pivot position indicator
+    # If not remove the rows without any elements
 
-    if len(Loc_Gen) == Gen_Size:
-        for i in range(len(Sorted_Gen)):
-            if Sorted_Gen[i][0] == i:
-                Sorted_Gen[i].pop(0)
-            else:
+    if len(Loc_Gen) == Gen_Size:                                # If the generation is fully decoded
+        for i in range(len(Sorted_Gen)):                        # Go through all rows
+            if Sorted_Gen[i][0] == i:                           # If the row is in its right position
+                Sorted_Gen[i].pop(0)                            # Pop the pivot position indicator
+            else:                                               # If not sorted correctly
                 print("There is a bug, the sorting algorithm has failed to sort the generation")
-                return -1
-        return Sorted_Gen
-    else:
-        pop_List = []
-        Pivot_List = []
-        for i in range(len(Sorted_Gen)):
-            if len(Sorted_Gen[i]) == 0:
-                pop_List.append(i)
-            else:
-                Pivot_List.append(i)
-        pop_List.reverse()
-        for i in pop_List:
-            Sorted_Gen.pop(i)
-        for i in range(len(Sorted_Gen)):
-            if Sorted_Gen[i][0] == Pivot_List[i]:
+                return -1                                       # Return an error value
+        return Sorted_Gen                                       # Return the sorted generation
+    else:                                                       # If the generation is not fully decoded
+        pop_List = []                                           # This list contains the position of the rows without any elements
+        Pivot_List = []                                         # This list contains the position of the rows with elements
+        for i in range(len(Sorted_Gen)):                        # Go through all the lists in Sorted Gen
+            if len(Sorted_Gen[i]) == 0:                         # If the list is empty
+                pop_List.append(i)                              # Put tis position in pop_List
+            else:                                               # If list is not empty
+                Pivot_List.append(i)                            # Put tis position in Pivot_List
+        pop_List.reverse()                                      # Reverse the pop list so it works from the highest value. Otherwise an error would occur due to positions changing after removing an empty list
+        for i in pop_List:                                      # Go throught the rows without elements
+            Sorted_Gen.pop(i)                                   # And remove these rows
+        for i in range(len(Sorted_Gen)):                        # Go through the remaining rows
+            if Sorted_Gen[i][0] == Pivot_List[i]:               # Check if they are ordered correctly
                 continue
-            else:
+            else:                                               # If not
                 print("There is a bug, the sorting algorithm has failed to sort the generation")
-                return -1
-        return Sorted_Gen
+                return -1                                       # Return an error value
+        return Sorted_Gen                                       # Return the sorted generation
 
 # This function takes a sorted matrix and reduces it to reduced echelon form
-def Generations_Complete_Reduce(Gen, Gen_Num, Gen_Size, Symbol_Size):
-    Sorted_Gen = Gen[:]
-    for i in range(len(Sorted_Gen) - 1, 0, -1):                                # The bottom symbol
-        a = Sorted_Gen[i][:]
+def Generations_Complete_Reduce(Gen, Gen_Num, Gen_Size, Symbol_Size):           # Arguments(Generation to reduce, Generation number, Generation size, Symbol size)
+    Sorted_Gen = Gen[:]                                                         # Copy the generation into a local generation
+    for i in range(len(Sorted_Gen) - 1, 0, -1):                                 # The bottom symbol
+        a = Sorted_Gen[i][:]                                                    # Copy the bottom row into a local list to be XoR'ed
         for j in range(i):                                                      # The upper symbols
-            if Sorted_Gen[j][i] == 1:
-                b = Sorted_Gen[j][:]
-                Sorted_Gen[j] = bytes([a ^ b for a, b in zip(a, b)])
+            if Sorted_Gen[j][i] == 1:                                           # Only XoR if a coefficient is not 0, cause otherwise you don't need to XoR
+                b = Sorted_Gen[j][:]                                            # Copy the upper symbol into a local list to be XoR'ed
+                Sorted_Gen[j] = bytes([a ^ b for a, b in zip(a, b)])            # XoR the two lists and replace the row of the upper symbol with the XoR'ed row
 
-    # Append all the symbol data into the Full_File_Data list
+    # Append all the symbol data into the Full_File_Data list which is used to make the file
 
-    for i in range(Gen_Size):
-        for j in range(Symbol_Size):
-            Full_File_Data[Gen_Num].append(Sorted_Gen[i][Gen_Size + j])
-    Generations_Decoded[Gen_Num] = 1
-    return 1
+    for i in range(Gen_Size):                                                   # Go through all rows in the generation
+        for j in range(Symbol_Size):                                            # Go through all the elements in the symbol
+            Full_File_Data[Gen_Num].append(Sorted_Gen[i][Gen_Size + j])         # Put the symbol elements in the Full_File_Size list
+    Generations_Decoded[Gen_Num] = 1                                            # Declare the generation as decoded
+    return 1                                                                    # Return a success value
 
 # This function takes a coded symbol and performs the decoding algorithm on it
 def Generations_Decode(Coded_Symbol, Gen_Num, Gen_Size):
@@ -329,12 +333,9 @@ def Sort_Packets(Packet, File_Size = 3):
 # create an OTAA authentication parameters
 dev_eui = ubinascii.unhexlify('be3f661454d53eae')           # possibly the wrong value but the uplink transmissions work without it
 app_eui = ubinascii.unhexlify('0000000000000000')
-#app_key = ubinascii.unhexlify('ffea46d69b39a495b4b16d69390c9b17')
-#app_key = ubinascii.unhexlify('cd4005ab70fa0a1e940cf29f7204b0e3')
 app_key = ubinascii.unhexlify('c46d071ad49b09ce5d776f2981349ba0')
 
 # Initialise LoRa in LORAWAN Class C mode.
-#lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868, device_class=LoRa.CLASS_C)
 
 # Restoring previous lora sessions
@@ -343,7 +344,6 @@ lora.nvram_restore()
 # Join the network
 if not lora.has_joined():
     lora.join(activation=LoRa.OTAA, auth=(app_eui, app_key), timeout=0, dr=0)
-    # lora.join(activation=LoRa.OTAA, auth=(dev_eui, app_eui, app_key), timeout=0, dr=0)
     timeOut = 0
     while not lora.has_joined():
         timeOut += 1
@@ -496,10 +496,6 @@ while File_Read == b'' and File_Write_Attempts < 10:
 else:
     print("File has stuff in it")
 
-execfile(File_Name)                        # Dangerous. It is possible to brick the LoPy by running the sent file. Only used for showcasing
-print("File executed")
-#sys.exit()
+#execfile(File_Name)                        # Dangerous. It is possible to brick the LoPy by running the sent file. Only used for showcasing
 
-# We will clean the file before sending it with the report
-# This file has added a lot of prints to print out the entire process. If you don't like them, go around and comment them out
-# This file has not been tested yet. Delete this comment when it is tested and works
+# This program has been tested. The amount of prints have crashed the LoPy. Therefore the prints have been commented
