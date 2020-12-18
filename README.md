@@ -6,4 +6,3 @@ it serves both as a convenience to new users and existing due to the ability to 
 
 incidentally this structure also serves as a convenient file sharing platform during the project period.
 
-FINAL CODE IS THE NEWEST VERSION IN THE MAIN REPOSITORY
