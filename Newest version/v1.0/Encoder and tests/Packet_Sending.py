@@ -89,7 +89,7 @@ def Send_Raw_Packets():
             r = requests.post(d_queue_url, data=json.dumps(body), headers=headers)      # Send a post request to send the packet
             print("Raw packet " + str(Raw_Packets_Sent) + " Sent")                      # Print a feedback message
             print(Packet)                                                               # Print the packet that was sent
-            Raw_Packets_Sent += 1                                                       # Increase the counter of sent packets by one
+        Raw_Packets_Sent += 1                                                           # Increase the counter of sent packets by one
 
 # Then sends a generation multiplied by a random encoding vector
 def Send_Encoded_Packets():
