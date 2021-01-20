@@ -1,87 +1,220 @@
-Pycom MicroPython 1.18.2.r1 [v1.8.6-849-d6b3616] on 2019-02-22; LoPy4 with ESP32
-Type "help()" for more information.
->>> 
->>> Running C:\Users\thoma\Downloads\LoPy_Decoder_File.py
+ Running C:\Users\thoma\Documents\testprogram\ComTek\chirpstack\lopy\lopy_decoder_file_V3.py
 
 >>> 
 >>> 
-Connected!
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Not yet joined...
+Connected.
 Update status is: 1
-Packet received
+
+Packet received:
 [0, 1, 250, 0, 13, 40, 16, 0, 35, 32, 109, 97, 105, 110, 46, 112, 121, 32, 45, 45, 32, 112, 117, 116, 32, 121, 111, 117, 114, 32, 99, 111, 100, 101, 32, 104, 101, 114, 101, 33, 13, 10, 105, 109, 112, 111, 114, 116]
-Packet inserted
-Is the generation decoded? 0
-Packet received
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
 [0, 1, 250, 0, 13, 40, 4, 0, 97, 108, 115, 101, 41, 13, 10, 102, 111, 114, 32, 105, 32, 105, 110, 32, 114, 97, 110, 103, 101, 40, 50, 41, 58, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98]
-Packet inserted
-Is the generation decoded? 0
-Packet received
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
 [0, 1, 250, 0, 13, 40, 1, 0, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 54, 54, 48, 48, 54, 54, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13]
-Packet inserted
-Is the generation decoded? 0
-Packet received
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
 [0, 1, 250, 0, 13, 40, 0, 64, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 67, 67, 48, 48, 67, 67, 41, 13, 10, 32, 32, 32, 32]
-Packet inserted
-Is the generation decoded? 0
-Packet received
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
 [0, 1, 250, 0, 13, 40, 0, 16, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48]
-Packet inserted
-Is the generation decoded? 0
-Packet received
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
 [0, 1, 250, 0, 13, 40, 0, 4, 103, 98, 108, 101, 100, 40, 48, 120, 51, 51, 48, 48, 51, 51, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32]
-Packet inserted
-Is the generation decoded? 0
-Packet received
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
 [0, 1, 250, 0, 13, 40, 0, 1, 41, 13, 10, 112, 121, 99, 111, 109, 46, 104, 101, 97, 114, 116, 98, 101, 97, 116, 40, 84, 114, 117, 101, 41, 13, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-Packet inserted
-Is the generation decoded? 0
-Packet received
-[0, 1, 250, 0, 13, 40, 8, 0, 32, 112, 121, 99, 111, 109, 13, 10, 105, 109, 112, 111, 114, 116, 32, 116, 105, 109, 101, 13, 10, 13, 10, 112, 121, 99, 111, 109, 46, 104, 101, 97, 114, 116, 98, 101, 97, 116, 40, 70]
-Packet inserted
-Is the generation decoded? 0
-Packet received
-[0, 1, 250, 0, 13, 40, 0, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 57, 57, 48, 48, 57, 57]
-Packet inserted
-Is the generation decoded? 0
-Packet received
-[0, 1, 250, 0, 13, 40, 4, 18, 56, 24, 26, 42, 100, 3, 88, 117, 100, 115, 32, 35, 123, 53, 115, 117, 50, 121, 111, 126, 88, 11, 31, 3, 58, 13, 90, 121, 55, 38, 32, 59, 37, 119, 97, 100, 46, 102, 103, 97]
-Packet inserted
-Is the generation decoded? 0
-Packet received
-[0, 1, 250, 0, 13, 40, 1, 0, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 54, 54, 48, 48, 54, 54, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108, 101, 101, 112, 40, 49, 41, 13]
-Packet discarded
-Is the generation decoded? 0
-Packet received
-[0, 1, 250, 0, 13, 40, 2, 1, 69, 104, 110, 88, 73, 27, 92, 94, 30, 88, 86, 82, 91, 121, 104, 69, 65, 84, 8, 32, 27, 24, 0, 7, 126, 102, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32, 112, 121]
-Packet inserted
-Is the generation decoded? 0
-Packet received
-[0, 1, 250, 0, 13, 40, 2, 4, 11, 7, 8, 77, 84, 80, 3, 75, 3, 3, 3, 3, 26, 62, 35, 45, 42, 0, 0, 84, 73, 25, 12, 67, 22, 66, 22, 9, 21, 77, 65, 1, 60, 35, 45, 42, 0, 0, 80, 89]
-There is a bug in the system, the thing got reduced and still did not get a unique pivot position. For some reason it still works with this bug.
-Packet discarded
-Is the generation decoded? 0
-Packet received
-[0, 1, 250, 0, 13, 40, 0, 128, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114, 103, 98, 108, 101, 100, 40, 48, 120, 57, 57, 48, 48, 57, 57, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 115, 108]
-Packet inserted
-Is the generation decoded? 0
-Packet received
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 1, 24, 50, 84, 81, 62, 98, 113, 116, 49, 1, 3, 109, 62, 43, 122, 39, 60, 45, 123, 41, 115, 108, 101, 101, 112, 40, 49, 45, 29, 4, 42, 99, 125, 62, 114, 126, 127, 34, 56, 47, 79]
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 4, 20, 47, 3, 21, 32, 109, 5, 26, 106, 53, 44, 117, 119, 96, 54, 34, 72, 8, 105, 127, 110, 72, 86, 123, 100, 127, 3, 9, 53, 38, 42, 61, 118, 58, 45, 0, 11, 107, 54, 111, 114]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 18, 128, 69, 101, 41, 105, 121, 102, 100, 32, 38, 125, 48, 108, 110, 31, 19, 49, 100, 113, 127, 121, 34, 116, 54, 113, 46, 48, 108, 0, 31, 122, 116, 40, 32, 116, 32, 32, 53, 97, 113, 97]
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 17, 8, 56, 121, 54, 127, 43, 63, 122, 53, 17, 78, 37, 61, 120, 102, 55, 45, 125, 42, 119, 47, 19, 79, 38, 63, 108, 116, 125, 12, 2, 55, 107, 114, 65, 31, 117, 126, 55, 51, 117, 11]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 17, 178, 103, 114, 36, 69, 88, 4, 11, 9, 29, 88, 3, 20, 77, 117, 56, 84, 20, 95, 72, 77, 2, 83, 49, 56, 83, 14, 74, 55, 121, 84, 15, 17, 45, 119, 82, 64, 13, 84, 17, 47]
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 0, 9, 81, 59, 60, 64, 73, 85, 89, 68, 35, 98, 69, 65, 82, 84, 22, 12, 12, 17, 6, 39, 30, 16, 0, 89, 37, 59, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 8, 52, 26, 118, 114, 67, 5, 22, 113, 99, 86, 67, 13, 64, 27, 38, 102, 60, 51, 69, 84, 116, 94, 16, 44, 80, 18, 31, 11, 26, 68, 7, 28, 79, 1, 66, 52, 58, 20, 0, 25, 111]
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 1, 136, 17, 121, 123, 62, 98, 33, 45, 38, 7, 3, 38, 98, 63, 116, 46, 60, 57, 123, 40, 34, 88, 86, 117, 96, 49, 40, 116, 105, 109, 101, 46, 115, 108, 97, 117, 126, 34, 114, 116, 19]
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 0, 8, 120, 54, 54, 48, 48, 54, 54, 41, 13, 10, 32, 32, 32, 32, 116, 105, 109, 101, 46, 15, 108, 101, 101, 112, 40, 49, 41, 13, 10, 32, 32, 32, 32, 112, 121, 99, 111, 109, 46, 114]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 8, 36, 51, 123, 120, 99, 37, 54, 81, 23, 63, 46, 104, 110, 104, 74, 3, 89, 67, 109, 101, 93, 83, 26, 12, 112, 50, 63, 123, 99, 39, 104, 113, 97, 115, 37, 86, 86, 113, 100, 49, 95]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 3, 68, 13, 13, 21, 75, 23, 30, 108, 45, 70, 71, 11, 19, 18, 113, 118, 114, 119, 24, 68, 26, 38, 127, 73, 7, 30, 82, 26, 35, 59, 24, 95, 49, 19, 111, 69, 80, 8, 17, 89, 116]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 18, 145, 69, 101, 41, 57, 32, 37, 43, 57, 97, 120, 48, 35, 111, 7, 20, 49, 117, 45, 102, 4, 93, 11, 115, 120, 3, 26, 28, 121, 124, 21, 25, 6, 82, 19, 66, 76, 80, 5, 89, 81]
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
 [0, 1, 250, 0, 13, 40, 0, 1, 41, 13, 10, 112, 121, 99, 111, 109, 46, 104, 101, 97, 114, 116, 98, 101, 97, 116, 40, 84, 114, 117, 101, 41, 13, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-Packet discarded
-Is the generation decoded? 0
-Packet received
-[0, 1, 250, 0, 13, 40, 4, 8, 25, 90, 69, 85, 25, 59, 60, 79, 98, 120, 0, 73, 0, 73, 26, 73, 31, 4, 64, 20, 9, 77, 87, 89, 18, 60, 35, 45, 42, 0, 0, 80, 89, 19, 22, 14, 65, 31, 73, 16]
-Packet inserted
-Packets needed to reduce generation number0is: [16]
-Sorting Generation 0 Succeeded
-Is the generation decoded? 1
-Generation0 decoded
+
+
+Decoding algorithm end.
+Result: Packet discarded 
+
+Packet received:
+[0, 1, 250, 0, 13, 40, 16, 32, 87, 73, 0, 4, 71, 29, 66, 21, 28, 80, 5, 28, 9, 125, 127, 84, 0, 89, 79, 5, 11, 67, 12, 2, 74, 23, 71, 10, 9, 23, 1, 9, 61, 114, 80, 84, 64, 95, 75, 77]
+
+
+Decoding algorithm end.
+Result: Packet inserted 
+
+Number of packets needed to reduce generation number 0 is: [27]
+
+Sorting Generation 0 Succeeded 
+
+Generation reduced to reduced echelon form and uncoded symbols appended to Full_File_Data 
+
+Generation 0 decoded
 All generations are decoded
-b'# main.py -- put your code here!\r\nimport pycom\r\nimport time\r\n\r\npycom.heartbeat(False)\r\nfor i in range(2):\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x000000)\r\n    time.sleep(3)\r\npycom.heartbeat(True)\r'
+b'# main.py -- put your code here!\r\nimport pycom\r\nimport time\r\n\r\npycom.heartbeat(False)\r\nfor i in range(2):\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x000000)\r\n    time.sleep(3)\r\npycom.heartbeat(True)\r\n'
 Update status is: 0
 File read
-b'# main.py -- put your code here!\r\nimport pycom\r\nimport time\r\n\r\npycom.heartbeat(False)\r\nfor i in range(2):\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x000000)\r\n    time.sleep(3)\r\npycom.heartbeat(True)\r'
+b'# main.py -- put your code here!\r\nimport pycom\r\nimport time\r\n\r\npycom.heartbeat(False)\r\nfor i in range(2):\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0xCC00CC)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x990099)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x660066)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x330033)\r\n    time.sleep(1)\r\n    pycom.rgbled(0x000000)\r\n    time.sleep(3)\r\npycom.heartbeat(True)\r\n'
 File has stuff in it
+File executed
 >
-Pycom MicroPython 1.18.2.r1 [v1.8.6-849-d6b3616] on 2019-02-22; LoPy4 with ESP32
-Type "help()" for more information.
->>>
